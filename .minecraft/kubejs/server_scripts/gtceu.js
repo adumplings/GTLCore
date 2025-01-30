@@ -2758,32 +2758,6 @@ ServerEvents.recipes((event) => {
             .duration(200)
     })
 
-    gtr.assembler("gtmthings:max_wireless_energy_receive_cover")
-        .itemInputs("gtlcore:max_sensor",
-            "gtlcore:max_emitter",
-            "4x gtceu:ender_pearl_plate",
-            "2x #gtceu:circuits/max",
-            "kubejs:max_voltage_coil",
-            "kubejs:fm_chip",
-            "2x gtceu:cosmicneutronium_single_cable",
-            "2x gtceu:red_alloy_single_cable",
-            "4x gtceu:chaos_plate")
-        .inputFluids("gtceu:super_mutated_living_solder 144")
-        .itemOutputs("gtmthings:max_wireless_energy_receive_cover")
-        .EUt(GTValues.VA[14])
-        .duration(200)
-
-    gtr.assembler("gtmthings:max_4a_wireless_energy_receive_cover")
-        .itemInputs("2x gtmthings:max_wireless_energy_receive_cover",
-            "8x gtceu:shirabon_foil",
-            "4x gtceu:niobium_titanium_quadruple_cable",
-            "2x kubejs:max_voltage_coil",
-            "2x gtceu:double_battery_alloy_plate")
-        .inputFluids("gtceu:super_mutated_living_solder 144")
-        .itemOutputs("gtmthings:max_4a_wireless_energy_receive_cover")
-        .EUt(GTValues.VA[14])
-        .duration(200)
-
     for (let index = 5; index < 15; index++) {
         let tierName = GTValues.VN[index].toLowerCase()
         gtr.assembler(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
