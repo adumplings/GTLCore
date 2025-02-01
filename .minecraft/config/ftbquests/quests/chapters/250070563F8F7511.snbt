@@ -1139,6 +1139,7 @@
 			dependencies: ["4B6F43302E963F5E"]
 			icon: "gtlcore:infinite_cell_component"
 			id: "7198356C944E053A"
+			optional: true
 			rewards: [
 				{
 					id: "7480CA9E0C881C90"
@@ -1240,6 +1241,7 @@
 			]
 			icon: "usclb:clipboard"
 			id: "0FA161E6D70D211E"
+			optional: true
 			rewards: [{
 				id: "4B16101838A6524C"
 				item: "usclb:clipboard"
@@ -1263,6 +1265,7 @@
 				"5 流体管道会很卡"
 			]
 			id: "206F4C123EC2550F"
+			optional: true
 			tasks: [{
 				id: "78133B00994EC9AC"
 				item: "pipez:wrench"
@@ -1281,6 +1284,39 @@
 			}]
 			x: 0.0d
 			y: 0.5d
+		}
+		{
+			description: [
+				"这是个坏消息，你来到了一个碎片世界中，"
+				"这个世界并不完整，世界变成了一个个碎片，"
+				"不过我为你留了些好东西，它们可以帮你继续你的旅程。"
+				"保存好它们，&l&d&o它们都是必要的!!!&r&r&r"
+				""
+				""
+				"必要的提示："
+				"这是什么！空岛模式！"
+				"如果你在世界创建的是时候选择了 &b空岛&r"
+				"这个任务才是可以完成的"
+				"你可以在游戏菜单界面， 单击开启mod，"
+				"搜索gtlcore，点击配置，"
+				"将 &b空岛模式&r 的配置由 &bfalse&r 改为 &btrue&r"
+				""
+				"（这样才是真的进入空岛模式了，如果你想试试普通模式请记得在进入世界前切换模式）"
+				""
+				"（在改变配置的时候可能会&4崩溃&r这是正常的）"
+			]
+			icon: "gtlcore:world_fragments_overworld"
+			id: "0F4AFDE98CEA87B1"
+			invisible: true
+			optional: true
+			tasks: [{
+				id: "3A49E9FC392338BA"
+				item: "gtlcore:world_fragments_overworld"
+				type: "item"
+			}]
+			title: "空岛模式"
+			x: -6.5d
+			y: -0.5d
 		}
 	]
 	title: "由此开始"

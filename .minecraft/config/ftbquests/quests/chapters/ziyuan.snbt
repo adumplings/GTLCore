@@ -1898,6 +1898,7 @@
 		}
 		{
 			dependencies: ["6D650AE5A76585B3"]
+			description: ["离心核废料得到小搓钋"]
 			hide_dependent_lines: true
 			id: "7B412E455E2C321B"
 			tasks: [{
@@ -2468,6 +2469,7 @@
 			y: 20.5d
 		}
 		{
+			dependencies: ["603ED43DD7A89BF3"]
 			id: "2ED005FB3DC2EAB2"
 			tasks: [{
 				id: "772489A2AC0DA9B6"
@@ -2478,6 +2480,7 @@
 			y: 7.0d
 		}
 		{
+			dependencies: ["603ED43DD7A89BF3"]
 			id: "71C977A601F879AE"
 			tasks: [{
 				id: "222E9D1D4F6F71F9"
@@ -2488,6 +2491,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["603ED43DD7A89BF3"]
 			id: "4F220FB82AB77225"
 			tasks: [{
 				id: "4DECA124A915D0BB"
@@ -3354,6 +3358,7 @@
 			y: 17.0d
 		}
 		{
+			dependencies: ["793E9EC16B16BA5C"]
 			id: "5D1037E8365CC910"
 			subtitle: "开挖"
 			tasks: [{
@@ -3706,6 +3711,17 @@
 			}]
 			x: 25.5d
 			y: 24.5d
+		}
+		{
+			id: "430303070695D7D3"
+			subtitle: "你需要自己查看合成表以知道你需要什么"
+			tasks: [{
+				id: "19CF50A809E4A437"
+				title: "你已经是一个成熟的员工了"
+				type: "checkmark"
+			}]
+			x: 51.0d
+			y: 27.0d
 		}
 	]
 	title: "资源获取"

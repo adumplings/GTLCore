@@ -477,7 +477,7 @@
 			y: 11.5d
 		}
 		{
-			description: ["最高1048576A MAX输出，并且结构支持4面共享"]
+			description: [""]
 			id: "1893C9D673253B79"
 			tasks: [{
 				id: "7E9DC235BCE8E7BF"
@@ -645,11 +645,7 @@
 			y: 2.5d
 		}
 		{
-			description: [
-				"特大超临界涡轮，ZPM支架，中子素涡轮转子"
-				"20A-UEV发电，消耗量约284KB/s"
-				"（理论值请以实测为准）（9-16实测4A-UEV）"
-			]
+			description: [""]
 			id: "19B859F1C3DBECC7"
 			tasks: [{
 				id: "2FC2DAC3F005A348"
@@ -720,6 +716,7 @@
 			y: 2.5d
 		}
 		{
+			description: ["超级好用"]
 			id: "7F74D4ED0C9354C2"
 			tasks: [{
 				id: "35616BDE7144320C"

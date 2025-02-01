@@ -289,6 +289,7 @@
 				"7F9F473B8C508676"
 				"36E33432C72763C8"
 			]
+			icon_scale: 2.0d
 			id: "20F6BF1EDC6EBDC1"
 			rewards: [{
 				id: "0368C7A8382A16D9"
@@ -482,6 +483,7 @@
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
+			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
 				id: "298A039260B352D6"
@@ -496,6 +498,7 @@
 				"0877362A9EE36FB3"
 				"006BBE4D312A2E2E"
 			]
+			icon_scale: 2.0d
 			id: "7D399E31506924A0"
 			rewards: [{
 				id: "005FED5AFFB39EE8"
@@ -512,13 +515,14 @@
 		}
 		{
 			dependencies: ["7D399E31506924A0"]
+			icon_scale: 2.0d
 			id: "40C39645B1DE2488"
 			rewards: [{
 				id: "1AD5EB109E14A85F"
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "348825C79AD479CA"
@@ -779,13 +783,14 @@
 				"54034055F57DDAA5"
 				"49ABB341017BAE85"
 			]
+			icon_scale: 2.0d
 			id: "388E5C1034C54D19"
 			rewards: [{
 				id: "2DC114FA32688047"
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "08CFFDE3C82C9FCF"
@@ -910,6 +915,7 @@
 				"40C39645B1DE2488"
 				"0037D6BA6A4ABB72"
 			]
+			icon_scale: 2.0d
 			id: "033DE57F0D91698C"
 			tasks: [{
 				id: "139820782C4C2E96"
@@ -1015,7 +1021,7 @@
 		}
 		{
 			dependencies: ["1715EF3BF00D33B7"]
-			description: ["可能出现未知bug，非必要不用使用，可以使用合成卡代替"]
+			description: ["建议断开网络写，写好再连接网络"]
 			id: "07758FA2615B7559"
 			tasks: [{
 				id: "5BAF8D0B28FC21AE"
@@ -1037,7 +1043,11 @@
 		}
 		{
 			dependencies: ["033DE57F0D91698C"]
-			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
+			description: [
+				"有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"
+				""
+				"一共有33个，每个电路都是单独的，你需要做一些。"
+			]
 			id: "471C9A591D5CF776"
 			tasks: [{
 				id: "6E1C628F99BD3D93"
@@ -1114,6 +1124,7 @@
 					Configuration: 0
 				}
 			}
+			icon_scale: 2.0d
 			id: "51A6B6CDC90D7E76"
 			rewards: [{
 				id: "7AFF24BD5E9724BE"

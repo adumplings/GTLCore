@@ -77,6 +77,7 @@
 				"几乎每种材料都可以在这台机器中生产,因此,如果您在查找搅拌机配方时遇到麻烦,请寻找熔融流体!"
 			]
 			icon: "gtceu:alloy_blast_smelter"
+			icon_scale: 2.0d
 			id: "1F0956C3BD4745A1"
 			shape: "rsquare"
 			size: 2.0d
@@ -100,6 +101,7 @@
 			dependencies: ["1F0956C3BD4745A1"]
 			description: ["现在可以制作单方块机器的大型版本，能更好的升压超频，同时支持并行"]
 			icon: "gtceu:large_material_press"
+			icon_scale: 2.0d
 			id: "1FACFECB6C5962E3"
 			size: 2.0d
 			tasks: [
@@ -139,6 +141,7 @@
 		{
 			dependencies: ["38480A52A13DA157"]
 			description: ["可以用磷化铟，也可以用量子之眼"]
+			icon_scale: 2.0d
 			id: "68A3D32BFF9BF7F3"
 			tasks: [{
 				id: "05E8D6C7043D0BCD"
@@ -165,6 +168,7 @@
 				"62B67704211A105D"
 				"079CD9FD65CB2ED2"
 			]
+			icon_scale: 2.0d
 			id: "7DCA0B7C9F3C3ACF"
 			tasks: [{
 				id: "0D25CA72C05B394F"
@@ -266,6 +270,7 @@
 				"22795A09A3BD7344"
 			]
 			description: ["量子处理器是使用量子位作为信息的基本单位，能够同时处于0和1的叠加状态，使得量子计算机能够执行复杂的计算任务。"]
+			icon_scale: 2.0d
 			id: "31AC84CBD7C26566"
 			tasks: [{
 				id: "30125C65F7525965"
@@ -277,6 +282,7 @@
 		}
 		{
 			dependencies: ["31AC84CBD7C26566"]
+			icon_scale: 2.0d
 			id: "3F0D5B17665DF1CE"
 			tasks: [{
 				id: "77F7DCDCA5B2558E"
@@ -288,6 +294,7 @@
 		}
 		{
 			dependencies: ["3F0D5B17665DF1CE"]
+			icon_scale: 2.0d
 			id: "506BE1A622532375"
 			shape: "rsquare"
 			size: 2.0d
@@ -301,6 +308,7 @@
 		}
 		{
 			dependencies: ["506BE1A622532375"]
+			icon_scale: 2.0d
 			id: "4E1A28AFF661CED0"
 			tasks: [{
 				id: "0851DE42F4AC5E9C"
@@ -351,6 +359,7 @@
 				"需要装配线数据来运行。"
 				"物品和流体无需有序输入"
 			]
+			icon_scale: 2.0d
 			id: "7F8C2ECC7CE2BF20"
 			shape: "rsquare"
 			size: 2.0d
@@ -376,6 +385,7 @@
 		{
 			dependencies: ["027B25761BD830C8"]
 			description: ["不能使用2能源仓升压"]
+			icon_scale: 2.0d
 			id: "30A0D221474FB44A"
 			shape: "rsquare"
 			size: 1.0d
@@ -515,6 +525,7 @@
 		{
 			dependencies: ["0F22A8CE63F369CA"]
 			description: ["64并行高炉"]
+			icon_scale: 2.0d
 			id: "52070757274DC2B4"
 			shape: "circle"
 			size: 2.0d
@@ -529,6 +540,7 @@
 		{
 			dependencies: ["38480A52A13DA157"]
 			description: ["用不完的蒸汽"]
+			icon_scale: 2.0d
 			id: "5744F6172D4E112B"
 			optional: true
 			shape: "rsquare"
@@ -561,6 +573,7 @@
 				"0F22A8CE63F369CA"
 				"00E7CB7CD9296B1A"
 			]
+			icon_scale: 2.0d
 			id: "36F5A40D3976E512"
 			rewards: [{
 				id: "4A04C411F24ADCCC"
@@ -596,6 +609,7 @@
 		{
 			dependencies: ["1F0956C3BD4745A1"]
 			description: ["高温用于发电，低温用于生产资源"]
+			icon_scale: 2.0d
 			id: "365298DB6520227A"
 			shape: "rsquare"
 			size: 2.0d
@@ -610,6 +624,7 @@
 		{
 			dependencies: ["27BA6EBA81622516"]
 			description: ["同步AE库存"]
+			icon_scale: 2.0d
 			id: "5608182772E855EC"
 			tasks: [
 				{
@@ -696,6 +711,7 @@
 		{
 			dependencies: ["27BA6EBA81622516"]
 			description: ["64并行冷冻机"]
+			icon_scale: 2.0d
 			id: "4C4081C79D227D1F"
 			size: 2.0d
 			tasks: [{
@@ -718,6 +734,7 @@
 		}
 		{
 			dependencies: ["1E7344C133C99565"]
+			icon_scale: 2.0d
 			id: "29D4D49428BF7FF4"
 			tasks: [
 				{
@@ -750,6 +767,7 @@
 		}
 		{
 			dependencies: ["7F8C2ECC7CE2BF20"]
+			icon_scale: 2.0d
 			id: "585580AFDFACDDB8"
 			tasks: [{
 				id: "7D699FD179C16EB0"

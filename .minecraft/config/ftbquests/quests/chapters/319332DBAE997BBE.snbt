@@ -21,6 +21,12 @@
 			x: 2.0d
 			y: 2.0d
 		}
+		{
+			id: "00F6315C088DE4F5"
+			linked_quest: "7B412E455E2C321B"
+			x: 4.0d
+			y: 2.0d
+		}
 	]
 	quests: [
 		{
@@ -37,6 +43,7 @@
 		}
 		{
 			dependencies: ["09F132EE8A88C872"]
+			icon_scale: 2.0d
 			id: "13BBF0FF3267BFDB"
 			tasks: [{
 				id: "78E1EA0D0D683394"
@@ -113,6 +120,7 @@
 				"14396D30F281CE72"
 			]
 			description: ["聚变是将两种较轻的元素转化为较重的元素的过程。"]
+			icon_scale: 2.0d
 			id: "118FDF6D9F868002"
 			shape: "rsquare"
 			size: 2.0d
@@ -164,6 +172,7 @@
 				"1F0C8D37619111BE"
 			]
 			description: ["使用极高的直接能量流来进行类似电子电路的计算。"]
+			icon_scale: 2.0d
 			id: "5BB55AABB91EEF9D"
 			tasks: [{
 				id: "3BB71E30BB01BF1F"
@@ -175,6 +184,7 @@
 		}
 		{
 			dependencies: ["5BB55AABB91EEF9D"]
+			icon_scale: 2.0d
 			id: "3DCB5E7F69CE5F7F"
 			tasks: [{
 				id: "042B52D3F408E0DA"
@@ -186,6 +196,7 @@
 		}
 		{
 			dependencies: ["3DCB5E7F69CE5F7F"]
+			icon_scale: 2.0d
 			id: "09856E59E52AEE7D"
 			shape: "rsquare"
 			size: 2.0d
@@ -202,6 +213,7 @@
 				"09856E59E52AEE7D"
 				"298369255C8130F7"
 			]
+			icon_scale: 2.0d
 			id: "233CA36D529EC3FB"
 			tasks: [{
 				id: "6BB959FA3D648151"
@@ -213,6 +225,7 @@
 		}
 		{
 			dependencies: ["4068B8F601B041D9"]
+			icon_scale: 2.0d
 			id: "7F649184083236E1"
 			tasks: [{
 				id: "0471E640C4427300"
@@ -275,6 +288,7 @@
 		}
 		{
 			dependencies: ["2BEF03C52636E165"]
+			icon_scale: 2.0d
 			id: "23B23867F311BF51"
 			tasks: [{
 				id: "3CDD2D97C975A389"
@@ -287,6 +301,7 @@
 		{
 			dependencies: ["233CA36D529EC3FB"]
 			description: ["你可以不用制作小型组装机了"]
+			icon_scale: 2.0d
 			id: "2A0269009ABF1414"
 			shape: "rsquare"
 			size: 1.0d
@@ -327,6 +342,7 @@
 				"0B89B3108EB4A01F"
 			]
 			description: ["需要计算机提供的算力"]
+			icon_scale: 2.0d
 			id: "298369255C8130F7"
 			shape: "rsquare"
 			size: 2.0d
@@ -344,6 +360,7 @@
 				"0B89B3108EB4A01F"
 			]
 			description: ["为设备运行提供算力，更多的算力需要升级组件或者使用交换机合并多个计算机算力"]
+			icon_scale: 2.0d
 			id: "50FFFB0EBEDAE50B"
 			shape: "rsquare"
 			size: 1.0d
@@ -479,6 +496,7 @@
 				"你应该已经开始采流体矿脉了，一定是吧"
 				"然后你就可以去地狱了"
 			]
+			icon_scale: 2.0d
 			id: "67784DEB22D18308"
 			rewards: [{
 				id: "6798C71A84FECE4E"
@@ -516,13 +534,11 @@
 				"7B412E455E2C321B"
 				"2AA63D77B0E86D2E"
 			]
-			description: [
-				"离心核废料得到小搓钋"
-				""
-				"其产物处理线路复杂请仔细查看"
-			]
+			description: ["其产物处理线路复杂请仔细查看"]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "766D051A40AB5324"
+			size: 2.0d
 			tasks: [
 				{
 					id: "2033E704723D1C29"
@@ -541,11 +557,11 @@
 				}
 			]
 			x: 6.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["52DF531AFB3A07CE"]
-			description: ["bug很多，可以去催GTM修复"]
+			description: ["bug很多，如果样板很少而且你确定不会串配方的时候可以使用，如果你不清楚请不要使用。"]
 			id: "4E6DCE7CDC74FC93"
 			tasks: [
 				{
@@ -581,6 +597,7 @@
 		}
 		{
 			dependencies: ["5B73961795BE42EE"]
+			description: ["非常慢，但是你需要它"]
 			id: "2588A0EF7F27DE5B"
 			tasks: [{
 				id: "6372AD4866BBD6B6"
@@ -649,12 +666,13 @@
 				item: "gtceu:fall_king_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["4BFA114E12BCB163"]
 			description: ["奇妙科技"]
+			icon_scale: 2.0d
 			id: "12F9033C4C2B29EB"
 			tasks: [{
 				id: "3BC83ABCD0AD2F48"
@@ -667,6 +685,7 @@
 		{
 			dependencies: ["4BFA114E12BCB163"]
 			description: ["有并行的化学反应釜"]
+			icon_scale: 2.0d
 			id: "4CDCF542F45205EB"
 			tasks: [{
 				id: "29BFCB27C5CDC79E"

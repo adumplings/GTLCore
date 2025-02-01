@@ -31,6 +31,7 @@
 				"2719D88ECD353F24"
 			]
 			description: [""]
+			icon_scale: 2.0d
 			id: "6C4F1C87F08F38AC"
 			shape: "rsquare"
 			size: 2.0d
@@ -62,6 +63,7 @@
 		{
 			dependencies: ["035C470213E8B4DB"]
 			description: ["更高级的单晶硅"]
+			icon_scale: 2.0d
 			id: "264EA49453E188C4"
 			tasks: [{
 				id: "0DAE2E307ACAD4E6"
@@ -123,6 +125,7 @@
 				"4F87B7DA47087F97"
 			]
 			description: ["它使用微型生态系统模拟计算，并将结果转化为综合解决方案。是高速、高吞吐量的计算设备。"]
+			icon_scale: 2.0d
 			id: "5E7F20C5F8530E1E"
 			tasks: [{
 				id: "2A747FECF6A9366B"
@@ -138,6 +141,7 @@
 				"1385E89DD3FD663B"
 				"53EB6E99F976AF31"
 			]
+			icon_scale: 2.0d
 			id: "76C32ADCD71DE8B8"
 			tasks: [{
 				id: "3EDE41255F7E04E7"
@@ -149,6 +153,7 @@
 		}
 		{
 			dependencies: ["76C32ADCD71DE8B8"]
+			icon_scale: 2.0d
 			id: "2AA1E574BA4327F8"
 			shape: "rsquare"
 			size: 2.0d
@@ -166,6 +171,7 @@
 				"1DFC7DC123A3D830"
 				"09537D159735D297"
 			]
+			icon_scale: 2.0d
 			id: "7204F1B6BCC74F1C"
 			tasks: [{
 				id: "1E35DC7EF8C5881E"
@@ -213,6 +219,7 @@
 		}
 		{
 			dependencies: ["1FA9E56114BFABF5"]
+			icon_scale: 2.0d
 			id: "53EB6E99F976AF31"
 			shape: "rsquare"
 			size: 2.0d
@@ -227,6 +234,7 @@
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
 			description: ["使用激光高速冷凝等离子体"]
+			icon_scale: 2.0d
 			id: "71D029B59C690121"
 			shape: "rsquare"
 			size: 2.0d
@@ -244,6 +252,7 @@
 				"2810CED22A6AD31A"
 				"583079AD88755662"
 			]
+			icon_scale: 2.0d
 			id: "43A7282802A06626"
 			tasks: [{
 				id: "1763964DDAF2AECC"
@@ -261,6 +270,7 @@
 				"1223F5F9BF7FF37F"
 				"333B741B06E49CE8"
 			]
+			icon_scale: 2.0d
 			id: "21CF5BE902E89B8A"
 			tasks: [{
 				id: "708ED67D28AAA758"
@@ -273,6 +283,7 @@
 		{
 			dependencies: ["7A7C73D046390488"]
 			description: ["需要提供算力"]
+			icon_scale: 2.0d
 			id: "31EDE3D976DE5A33"
 			tasks: [{
 				id: "194425B2D808120E"
@@ -285,6 +296,7 @@
 		{
 			dependencies: ["7A7C73D046390488"]
 			description: ["随着无人机的解锁，你可以跳过各种产线直接获得资源"]
+			icon_scale: 2.0d
 			id: "7ADB50ACF5AE1D13"
 			tasks: [{
 				id: "3F389DDC4C0810B4"
@@ -319,6 +331,7 @@
 		}
 		{
 			dependencies: ["12F8275FC06FCFEE"]
+			icon_scale: 2.0d
 			id: "3EA935A712FA0EBE"
 			tasks: [{
 				id: "1D87EC0E1793346B"
@@ -387,6 +400,7 @@
 				"776563C5BA327495"
 			]
 			description: ["这是T8火箭，解锁巴纳德C"]
+			icon_scale: 2.0d
 			id: "7A7C73D046390488"
 			rewards: [
 				{
@@ -448,6 +462,7 @@
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
+			icon_scale: 2.0d
 			id: "4500AC22EE5C09F0"
 			shape: "rsquare"
 			size: 1.0d
@@ -466,6 +481,7 @@
 				"7204F1B6BCC74F1C"
 			]
 			description: ["有些贵，但能用激光"]
+			icon_scale: 2.0d
 			id: "1FCD63F77E978107"
 			shape: "rsquare"
 			size: 1.0d
@@ -520,6 +536,7 @@
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
+			icon_scale: 2.0d
 			id: "07A5A5AD37710056"
 			tasks: [{
 				id: "7039AA556E4A462A"
@@ -531,6 +548,7 @@
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
+			icon_scale: 2.0d
 			id: "7597D3F42E7E8515"
 			tasks: [{
 				id: "798CD0CCB2B791EF"
@@ -546,6 +564,7 @@
 				"035C470213E8B4DB"
 			]
 			description: ["优化你的产线"]
+			icon_scale: 2.0d
 			id: "16C93F76F74CB8DB"
 			tasks: [{
 				id: "42B8B94BB1B32E83"
@@ -556,11 +575,13 @@
 			y: 2.0d
 		}
 		{
+			can_repeat: false
 			dependencies: [
 				"0A2D46609F5C3CAB"
 				"4F87B7DA47087F97"
 			]
 			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
+			icon_scale: 2.0d
 			id: "3565D2D5E0A2CEDF"
 			shape: "rsquare"
 			size: 1.0d
@@ -597,6 +618,7 @@
 		{
 			dependencies: ["0A2D46609F5C3CAB"]
 			description: ["大硅岩~~狠狠发电~~"]
+			icon_scale: 2.0d
 			id: "09E013C97E05C052"
 			tasks: [{
 				id: "6D5ADEFDD6695856"
@@ -604,6 +626,38 @@
 				type: "item"
 			}]
 			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2719D88ECD353F24"]
+			description: ["可以开始准备了"]
+			hide_dependency_lines: true
+			id: "4EA64DC5DA2F0F8C"
+			tasks: [{
+				id: "658F2BC37483CA4E"
+				item: "gtceu:grade_8_purified_water_bucket"
+				type: "item"
+			}]
+			title: "净化水"
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7204F1B6BCC74F1C"]
+			description: [
+				"能够走到这里，说明你已经是一位成熟的员工了，"
+				"后面章节的任务会开始省略越来越多的内容，"
+				"只留下关键部分，让你知道核心的内容。"
+				""
+				"加油，你能完成这个整合包的。"
+			]
+			id: "33ED15DC174005AF"
+			tasks: [{
+				id: "3946890464598256"
+				title: "接下来的路"
+				type: "checkmark"
+			}]
+			x: 12.0d
 			y: 2.0d
 		}
 	]

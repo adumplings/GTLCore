@@ -81,6 +81,7 @@
 		{
 			dependencies: ["296DE95F3BE7DC54"]
 			description: ["交易获得的物品，但不知道如何使用"]
+			icon_scale: 2.0d
 			id: "470DDCCD8E017A4F"
 			tasks: [{
 				id: "6C1581BB60019E84"
@@ -160,6 +161,7 @@
 		}
 		{
 			dependencies: ["338F629A694C7556"]
+			icon_scale: 2.0d
 			id: "7C4AD33299386B47"
 			tasks: [{
 				id: "29CE180A8857179D"
@@ -182,6 +184,7 @@
 		}
 		{
 			dependencies: ["48925ECBCC5D268D"]
+			icon_scale: 2.0d
 			id: "30907D7231913ACB"
 			tasks: [{
 				id: "46A19A3E3D3CF4A9"
@@ -211,6 +214,7 @@
 				"耗能固定为4A MAX"
 				"核心放入输入总线，方块放机器正中间"
 			]
+			icon_scale: 2.0d
 			id: "2F9392EF05DB11EF"
 			tasks: [{
 				id: "7AB830407E68C7F1"
@@ -273,6 +277,7 @@
 		}
 		{
 			dependencies: ["5AFEAD001EDA612D"]
+			icon_scale: 2.0d
 			id: "2A19E7C6DC247B90"
 			tasks: [{
 				id: "00F2D831815D719F"
@@ -313,6 +318,7 @@
 				"31B4B834D5DD87DB"
 			]
 			description: ["你看着它好像看到了好多个银河年前泛银河格雷科技销售部货架上的那个大胡子玩偶"]
+			icon_scale: 2.0d
 			id: "516498830339A0A9"
 			tasks: [{
 				id: "74404EE9AEC393D4"
@@ -325,17 +331,7 @@
 		}
 		{
 			dependencies: ["516498830339A0A9"]
-			description: [
-				"恭喜你完成了这个游戏，感谢你的游玩。"
-				""
-				""
-				"续作"
-				"格雷科技：新征程[GergTech:Odyssey]"
-				"锐意开发中，敬请期待。"
-				""
-				"续作"
-               	"格雷科技：休闲版-社区版[GregTech:Leisure-Community-Edition]"
-			]
+			description: ["恭喜你完成了这个游戏，感谢你的游玩。"]
 			hide: true
 			icon: "gtlcore:ultimate_tea"
 			id: "503A37C31E60684B"

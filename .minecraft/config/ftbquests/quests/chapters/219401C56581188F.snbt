@@ -35,6 +35,7 @@
 				"这里的魔力相当于一种原材料"
 				"蜡烛可以用石油制作黑色的，然后染色"
 			]
+			icon_scale: 2.0d
 			id: "22053B1292EE07C9"
 			shape: "rsquare"
 			size: 2.0d
@@ -54,6 +55,7 @@
 				"24585C3114095227"
 			]
 			description: ["该阶段的核心机器"]
+			icon_scale: 2.0d
 			id: "7523FB4AAB1F89C3"
 			shape: "rsquare"
 			size: 2.0d
@@ -88,6 +90,7 @@
 				"021401D3D29EBC87"
 				"2E05225ADF4D7D31"
 			]
+			icon_scale: 2.0d
 			id: "792A351AAA2A4F2B"
 			tasks: [{
 				id: "6496D870388FBB8D"
@@ -140,6 +143,7 @@
 		}
 		{
 			dependencies: ["78350872B1ACF525"]
+			icon_scale: 2.0d
 			id: "1AA874C1351E4A0D"
 			tasks: [{
 				id: "1932A8FC6815B114"
@@ -152,6 +156,7 @@
 		{
 			dependencies: ["792A351AAA2A4F2B"]
 			description: ["直接操纵里德堡原子的波函数来进行计算 "]
+			icon_scale: 2.0d
 			id: "48E77454D1CD87CD"
 			tasks: [{
 				id: "4244DC73F0D8DA55"
@@ -166,6 +171,7 @@
 				"48E77454D1CD87CD"
 				"2AA6041AC73CD47E"
 			]
+			icon_scale: 2.0d
 			id: "025FA532523BF33B"
 			tasks: [{
 				id: "2860A4E1E332B23C"
@@ -180,6 +186,7 @@
 				"025FA532523BF33B"
 				"588C2C0BED069F41"
 			]
+			icon_scale: 2.0d
 			id: "140CE2AEC7015CAB"
 			tasks: [{
 				id: "2F5461C2A1F31B6E"
@@ -194,6 +201,7 @@
 				"140CE2AEC7015CAB"
 				"28E04C03DD2C0854"
 			]
+			icon_scale: 2.0d
 			id: "39F73A63746EE6E8"
 			tasks: [{
 				id: "02A3997B96CC0AEC"
@@ -350,6 +358,7 @@
 		}
 		{
 			dependencies: ["39F73A63746EE6E8"]
+			icon_scale: 2.0d
 			id: "33390417E8A0AB88"
 			shape: "gear"
 			size: 1.0d
@@ -418,6 +427,7 @@
 		}
 		{
 			dependencies: ["30C1D7DEFB3B18BD"]
+			icon_scale: 2.0d
 			id: "2AA6041AC73CD47E"
 			tasks: [{
 				id: "1D9CEEE0C21C135E"
@@ -433,6 +443,7 @@
 				"71CB57064256F904"
 				"63F90FA0F85804B8"
 			]
+			icon_scale: 2.0d
 			id: "30C1D7DEFB3B18BD"
 			shape: "rsquare"
 			size: 2.0d
@@ -507,6 +518,7 @@
 		{
 			dependencies: ["021401D3D29EBC87"]
 			description: ["不用堆大量计算机了"]
+			icon_scale: 2.0d
 			id: "181A1B6F5AD15F52"
 			shape: "gear"
 			size: 1.0d
@@ -520,7 +532,9 @@
 		}
 		{
 			dependencies: ["6BB5ED6ECC43E30C"]
+			icon_scale: 2.0d
 			id: "678E707F85CD2071"
+			size: 1.0d
 			tasks: [{
 				id: "44B32E745AA622FE"
 				item: "kubejs:taranium_boule"
@@ -535,6 +549,7 @@
 				"34D6F0DF329B1877"
 			]
 			description: ["绝对干净"]
+			icon_scale: 2.0d
 			id: "67D93082DA7185CC"
 			tasks: [{
 				id: "6791BE188E97863E"
@@ -599,6 +614,7 @@
 				"61F8C5AA6DEB30D6"
 			]
 			description: ["高效率生产基岩"]
+			icon_scale: 2.0d
 			id: "3968C254B6AC9B9D"
 			shape: "gear"
 			size: 1.0d
@@ -612,6 +628,7 @@
 		}
 		{
 			dependencies: ["2AA6041AC73CD47E"]
+			icon_scale: 2.0d
 			id: "1C4D5D7786F64485"
 			tasks: [{
 				id: "2EA2C34D0708CF9A"
@@ -651,6 +668,7 @@
 		}
 		{
 			dependencies: ["588C2C0BED069F41"]
+			icon_scale: 2.0d
 			id: "0ED237B0CE3DDF59"
 			shape: "rsquare"
 			size: 2.0d

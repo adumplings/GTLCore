@@ -33,6 +33,7 @@
 		}
 		{
 			dependencies: ["74D9136DE32F9129"]
+			icon_scale: 2.0d
 			id: "1EC6366E9611F2AD"
 			rewards: [{
 				id: "797DDD6D591D0FFA"
@@ -51,6 +52,7 @@
 		}
 		{
 			dependencies: ["4DDF10E2B541BCBF"]
+			icon_scale: 2.0d
 			id: "7940CFD732610594"
 			rewards: [{
 				id: "1DFFD2F64A2F76AD"
@@ -181,6 +183,7 @@
 		{
 			dependencies: ["0243CEA5EE705EB0"]
 			dependency_requirement: "one_started"
+			icon_scale: 2.0d
 			id: "3FCF807491579B94"
 			rewards: [{
 				id: "62693CFE4D386654"
@@ -197,6 +200,7 @@
 		}
 		{
 			dependencies: ["3FCF807491579B94"]
+			icon_scale: 2.0d
 			id: "18CA398800CC2E1B"
 			rewards: [{
 				id: "68D0EF3FC6EEA6B9"
@@ -217,6 +221,7 @@
 				"5E9EA7E22BE663AF"
 			]
 			dependency_requirement: "one_completed"
+			icon_scale: 2.0d
 			id: "1C320B245EAC8D14"
 			min_required_dependencies: 1
 			rewards: [{
@@ -234,6 +239,7 @@
 		}
 		{
 			dependencies: ["1C320B245EAC8D14"]
+			icon_scale: 2.0d
 			id: "3461BF0D74E5E8DF"
 			rewards: [{
 				id: "4785F0739BD9FEF4"
@@ -253,6 +259,7 @@
 				"314E6600CD806FA0"
 				"26FA6E064EF9FF5B"
 			]
+			icon_scale: 2.0d
 			id: "5E9EA7E22BE663AF"
 			rewards: [{
 				id: "3AAB5D8903AA730D"
@@ -293,6 +300,7 @@
 		}
 		{
 			dependencies: ["5EECD56BF0EC1539"]
+			icon_scale: 2.0d
 			id: "0243CEA5EE705EB0"
 			rewards: [{
 				id: "147065FBB37624B6"
@@ -310,6 +318,7 @@
 		{
 			dependencies: ["7940CFD732610594"]
 			description: ["前往探索世界章节了解更多"]
+			icon_scale: 2.0d
 			id: "0931ECBAAD9252C7"
 			rewards: [
 				{
@@ -375,6 +384,8 @@
 		}
 		{
 			dependencies: ["26FA6E064EF9FF5B"]
+			description: ["你需要给他四个HV输入总线，以及三个HV输出总线"]
+			icon_scale: 2.0d
 			id: "6F85AB2294DA3310"
 			rewards: [{
 				id: "02DA5E6725FF070A"
@@ -392,6 +403,7 @@
 		{
 			dependencies: ["7940CFD732610594"]
 			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
+			icon_scale: 2.0d
 			id: "2EAAF5A6510D0EFE"
 			rewards: [{
 				id: "5BAC2973956359FC"
@@ -421,6 +433,7 @@
 		}
 		{
 			dependencies: ["7940CFD732610594"]
+			icon_scale: 2.0d
 			id: "027197A71E630966"
 			rewards: [{
 				id: "32C398A7D50E0057"
@@ -474,6 +487,7 @@
 				"676D1982102F4E79"
 				"06F68B574AC84B7B"
 			]
+			icon_scale: 2.0d
 			id: "75DAAFAD21F1451C"
 			rewards: [{
 				id: "4BA99C2D7D2D3D75"
@@ -636,6 +650,7 @@
 		{
 			dependencies: ["11186961491B1773"]
 			description: ["拥有无损超频，比通用混合厂强大。"]
+			icon_scale: 2.0d
 			id: "29450DC426C4E2D6"
 			rewards: [{
 				id: "50F14222E01C7EAC"
@@ -669,6 +684,7 @@
 		}
 		{
 			dependencies: ["6843AB3573F42310"]
+			icon_scale: 2.0d
 			id: "42E88FC72902FC0B"
 			rewards: [{
 				id: "6C2BC13971660863"
@@ -748,6 +764,7 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			description: ["终于可以获得研磨的副产物了"]
+			icon_scale: 2.0d
 			id: "24A12D2F592DC50D"
 			rewards: [{
 				id: "5AD386A16F67A37E"
@@ -798,6 +815,7 @@
 		}
 		{
 			dependencies: ["1A48D2DB936FF632"]
+			icon_scale: 2.0d
 			id: "58936CEB6176A18B"
 			rewards: [{
 				id: "1E0838EEE472F554"
@@ -816,6 +834,7 @@
 			dependencies: ["26FA6E064EF9FF5B"]
 			description: ["你可以开始用无线电了，这样就不用为怎么连电线而烦恼了"]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "29BB35C725BE7D96"
 			rewards: [{
 				id: "1CEFD1341263DF3A"
@@ -849,6 +868,7 @@
 				item: "gtceu:plascrete"
 				type: "item"
 			}]
+			subtitle: "不建议使用"
 			tasks: [{
 				id: "58D9C40EEF22D487"
 				item: "gtceu:cleanroom"

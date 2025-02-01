@@ -70,6 +70,7 @@
 				"7B46E8DE77D0BE8F"
 				"49ED5C32664DDF6C"
 			]
+			icon_scale: 2.0d
 			id: "6E3F07B3E9AB5882"
 			tasks: [{
 				id: "013D66093320BE17"
@@ -194,6 +195,7 @@
 				"437E5E4108228333"
 				"583D5AF26EDAF7DF"
 			]
+			icon_scale: 2.0d
 			id: "7843B0B9DF3F6FB3"
 			tasks: [{
 				id: "393B897D7AB83DD9"
@@ -209,6 +211,7 @@
 				"1BA07BC3DBFFF3E6"
 			]
 			description: ["利用虫洞，准确地在问题提出的时刻开始计算，以便在问题被问出时得到答案。"]
+			icon_scale: 2.0d
 			id: "2895FBB66750C0DF"
 			tasks: [{
 				id: "5D7AD7E0AEDFAC06"
@@ -225,6 +228,7 @@
 				"042FBA3AE7DE9957"
 				"4C667361F07F4243"
 			]
+			icon_scale: 2.0d
 			id: "44F9AF619F87974F"
 			tasks: [{
 				id: "489CB00F1158C54B"
@@ -299,7 +303,9 @@
 				"108792B10FDEC848"
 				"1F1FCB0CA5696FF1"
 			]
+			icon_scale: 2.0d
 			id: "74186877DB7DBE4D"
+			size: 2.0d
 			tasks: [{
 				id: "68FDD4F89178DC73"
 				item: "kubejs:quantum_chromodynamic_charge"
@@ -396,15 +402,17 @@
 			dependencies: ["559836CC234447C0"]
 			description: ["需被动自动化"]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "4A1F4AAAABC1DE23"
 			shape: "gear"
+			size: 2.0d
 			tasks: [{
 				id: "3E7381E30A07D91A"
 				item: "gtceu:dragon_egg_copier"
 				type: "item"
 			}]
 			x: 2.0d
-			y: -6.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["2A29DA4239E6BA44"]
@@ -422,9 +430,10 @@
 		{
 			dependencies: ["6C6A3B91957A0B7B"]
 			description: ["很贵的机器"]
+			icon_scale: 2.0d
 			id: "2A29DA4239E6BA44"
 			shape: "gear"
-			size: 1.0d
+			size: 2.0d
 			tasks: [{
 				id: "08A25F44515BD5D7"
 				item: "gtceu:qft"
@@ -464,6 +473,7 @@
 				"44F9AF619F87974F"
 				"6F7D79B8EA4FBF46"
 			]
+			icon_scale: 2.0d
 			id: "30AC80FE245A38E0"
 			tasks: [{
 				id: "41E02527C8CF211E"
@@ -480,6 +490,7 @@
 				"38FFB6D2003C7EB4"
 			]
 			description: ["电路的顶点"]
+			icon_scale: 2.0d
 			id: "32186EFF7020D432"
 			shape: "diamond"
 			size: 2.0d
@@ -563,6 +574,8 @@
 				"00A227F06D7F109E"
 				"042FBA3AE7DE9957"
 			]
+			description: ["看超维度锻炉的配方"]
+			icon_scale: 2.0d
 			id: "77A53FAAC098F859"
 			tasks: [{
 				id: "4ED6698376CC0B5A"
@@ -618,6 +631,7 @@
 		}
 		{
 			dependencies: ["375DD76CAEAD2CE1"]
+			icon_scale: 2.0d
 			id: "4C667361F07F4243"
 			tasks: [{
 				id: "16E54E03B44B51AF"
@@ -644,6 +658,7 @@
 		}
 		{
 			dependencies: ["108792B10FDEC848"]
+			icon_scale: 2.0d
 			id: "6C1AB68CC57D8670"
 			tasks: [{
 				id: "37C6A37E62975D44"
