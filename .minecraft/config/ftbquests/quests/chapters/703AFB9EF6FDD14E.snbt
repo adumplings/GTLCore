@@ -24,6 +24,7 @@
 	quests: [
 		{
 			dependencies: ["516AA655EF6CBBF0"]
+			hide: false
 			id: "0F04364907145AF1"
 			optional: true
 			rewards: [{
@@ -41,6 +42,7 @@
 		}
 		{
 			dependencies: ["516AA655EF6CBBF0"]
+			hide: false
 			id: "14B8DFAE3AA43497"
 			optional: true
 			rewards: [{
@@ -85,6 +87,7 @@
 				"0F04364907145AF1"
 				"14B8DFAE3AA43497"
 			]
+			hide: false
 			id: "1B664763E9558755"
 			optional: true
 			tasks: [{
@@ -99,6 +102,7 @@
 		{
 			dependencies: ["1B664763E9558755"]
 			description: ["不可超频"]
+			hide: false
 			id: "72FB1A140FACFA76"
 			optional: true
 			tasks: [{
@@ -129,6 +133,7 @@
 		}
 		{
 			dependencies: ["7F78340CB4A8EC59"]
+			hide: false
 			id: "7C24D5FD2C008BD4"
 			optional: true
 			tasks: [
@@ -235,6 +240,7 @@
 		}
 		{
 			dependencies: ["2DD0AD4DDBA7BFD0"]
+			hide: false
 			id: "7F78340CB4A8EC59"
 			optional: true
 			subtitle: "主世界313格以上是无重力环境"
@@ -260,6 +266,7 @@
 		}
 		{
 			dependencies: ["7C24D5FD2C008BD4"]
+			hide: false
 			id: "5F403C7AE4B5486C"
 			optional: true
 			tasks: [{
@@ -273,6 +280,7 @@
 		}
 		{
 			dependencies: ["5F403C7AE4B5486C"]
+			hide: false
 			id: "14E8D6FF37930A06"
 			optional: true
 			tasks: [{

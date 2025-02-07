@@ -1352,7 +1352,7 @@
 		}
 		{
 			dependencies: ["7F3D9F19428262A4"]
-			hide: true
+			hide: false
 			icon: "gtceu:ulv_fragment_world_collection_machine"
 			id: "16A27768544CDACB"
 			optional: true
@@ -1362,6 +1362,7 @@
 				type: "item"
 			}]
 			tasks: [{
+				consume_items: true
 				id: "30DBCFC58F070BB5"
 				item: "gtceu:gold_credit"
 				type: "item"

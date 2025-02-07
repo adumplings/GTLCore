@@ -2,6 +2,8 @@ disableDrift: true
 
 enablePrimitiveVoidOre: false
 
+enableSkyBlokeMode: false
+
 oreMultiplier: 4
 
 cellType: 4

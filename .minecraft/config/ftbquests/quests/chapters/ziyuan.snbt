@@ -784,8 +784,8 @@
 				}
 			]
 			title: "从热解炉流出来的东西"
-			x: 52.5d
-			y: 3.5d
+			x: 46.5d
+			y: 4.5d
 		}
 		{
 			id: "7BC592264A9788F7"
@@ -794,8 +794,8 @@
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 51.0d
-			y: 3.5d
+			x: 45.0d
+			y: 4.5d
 		}
 		{
 			description: ["lv时期可选的获得石油的手段"]
@@ -3342,8 +3342,8 @@
 				type: "checkmark"
 			}]
 			title: "生化线的产出"
-			x: 54.0d
-			y: 3.5d
+			x: 48.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["7979C5ACF9A0C8D2"]
@@ -3713,6 +3713,7 @@
 			y: 24.5d
 		}
 		{
+			description: ["其实这里只有到LUV的内容"]
 			id: "430303070695D7D3"
 			subtitle: "你需要自己查看合成表以知道你需要什么"
 			tasks: [{

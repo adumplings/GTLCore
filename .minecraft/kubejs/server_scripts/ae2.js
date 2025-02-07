@@ -15,6 +15,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "ae2:materials/basiccard" })
     event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
     event.remove({ id: "expatternprovider:fishbig" })
+    event.remove({ id: "expatternprovider:silicon_block" })
     event.shapeless("gtlcore:item_infinity_cell", ["ae2:item_cell_housing", "gtlcore:infinite_cell_component"])
     event.shapeless("gtlcore:fluid_infinity_cell", ["ae2:fluid_cell_housing", "gtlcore:infinite_cell_component"])
     event.shapeless("gtlcore:pattern_modifier", "expatternprovider:pattern_modifier")
@@ -382,7 +383,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_rleg")
         .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "4x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_rleg")
         .duration(200)
@@ -392,7 +393,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_lleg")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
             "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "4x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_lleg")
         .duration(200)
@@ -402,7 +403,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_rhand")
         .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "4x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_rhand")
         .duration(200)
@@ -412,7 +413,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_lhand")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
             "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "4x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_lhand")
         .duration(200)
@@ -422,6 +423,7 @@ ServerEvents.recipes((event) => {
     gtr.lightning_processor("ae2:charged_certus_quartz_crystal")
         .itemInputs("gtceu:certus_quartz_gem")
         .itemOutputs("ae2:charged_certus_quartz_crystal")
+        .circuit(1)
         .EUt(30)
         .duration(60)
 

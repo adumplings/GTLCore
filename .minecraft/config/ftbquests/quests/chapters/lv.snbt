@@ -123,6 +123,7 @@
 			dependencies: ["0223A643A5066452"]
 			description: ["让你更加高效的获得导线和细导线"]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "0CF19CAFB3355075"
 			rewards: [{
 				id: "2AC3B6BF675F4682"
@@ -144,6 +145,7 @@
 			]
 			description: ["让你更高效的获得板和箔，一锭出一板，一锭出四箔"]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "3DC0B933936357B3"
 			rewards: [{
 				id: "5722F9FCDB566036"
@@ -164,6 +166,7 @@
 				"29A8EC2EB3240278"
 			]
 			description: ["让你更高效的获得杆和螺丝，一锭出两杆，一螺栓出一螺丝"]
+			icon_scale: 2.0d
 			id: "048455FFC9BDC82A"
 			rewards: [{
 				id: "4B27D0AEB350794A"
@@ -928,6 +931,7 @@
 		{
 			dependencies: ["40C39645B1DE2488"]
 			id: "45321051E19D5C25"
+			optional: true
 			rewards: [{
 				id: "377A2142C44ADB94"
 				item: "gtceu:silver_credit"
@@ -1141,6 +1145,7 @@
 		}
 		{
 			dependencies: ["4C591AA4F1D907C1"]
+			description: ["输入，输入，维护 ，动力"]
 			id: "1486FC9F82B2E56E"
 			tasks: [{
 				id: "5EE2778F62F08653"
@@ -1152,7 +1157,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
-			description: ["注意没有流体隔离，如果需要，你可以去找GTM实现"]
+			description: ["注意没有流体隔离。"]
 			hide_dependency_lines: true
 			id: "62A978538C87ED8A"
 			rewards: [
