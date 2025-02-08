@@ -1316,9 +1316,13 @@
 			]
 			icon: "gtlcore:world_fragments_overworld"
 			id: "0F4AFDE98CEA87B1"
-			invisible: true
 			min_width: 350
 			optional: true
+			rewards: [{
+				id: "0AFB0CC841A156B2"
+				item: "gtlcore:world_fragments_overworld"
+				type: "item"
+			}]
 			tasks: [{
 				id: "61677438ACE10819"
 				item: "gtlcore:mining_crystal"
