@@ -81,6 +81,7 @@
 		{
 			dependencies: ["296DE95F3BE7DC54"]
 			description: ["交易获得的物品，但不知道如何使用"]
+			icon_scale: 2.0d
 			id: "470DDCCD8E017A4F"
 			tasks: [{
 				id: "6C1581BB60019E84"
@@ -160,6 +161,7 @@
 		}
 		{
 			dependencies: ["338F629A694C7556"]
+			icon_scale: 2.0d
 			id: "7C4AD33299386B47"
 			tasks: [{
 				id: "29CE180A8857179D"
@@ -182,6 +184,7 @@
 		}
 		{
 			dependencies: ["48925ECBCC5D268D"]
+			icon_scale: 2.0d
 			id: "30907D7231913ACB"
 			tasks: [{
 				id: "46A19A3E3D3CF4A9"
@@ -211,6 +214,7 @@
 				"耗能固定为4A MAX"
 				"核心放入输入总线，方块放机器正中间"
 			]
+			icon_scale: 2.0d
 			id: "2F9392EF05DB11EF"
 			tasks: [{
 				id: "7AB830407E68C7F1"
@@ -273,6 +277,7 @@
 		}
 		{
 			dependencies: ["5AFEAD001EDA612D"]
+			icon_scale: 2.0d
 			id: "2A19E7C6DC247B90"
 			tasks: [{
 				id: "00F2D831815D719F"
@@ -312,23 +317,8 @@
 				"5F145D9019C4BC48"
 				"31B4B834D5DD87DB"
 			]
-			id: "2C8028746220AEBA"
-			rewards: [{
-				id: "7DC22D8C70A5FD74"
-				item: "minecraft:grass"
-				type: "item"
-			}]
-			tasks: [{
-				id: "51FC498DB7A8FE4B"
-				title: "未完待续"
-				type: "checkmark"
-			}]
-			x: 15.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1416EAE88C9030C8"]
 			description: ["你看着它好像看到了好多个银河年前泛银河格雷科技销售部货架上的那个大胡子玩偶"]
+			icon_scale: 2.0d
 			id: "516498830339A0A9"
 			tasks: [{
 				id: "74404EE9AEC393D4"
@@ -336,8 +326,28 @@
 				type: "item"
 			}]
 			title: "我会永远陪着你的"
-			x: 7.0d
-			y: -1.0d
+			x: 14.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["516498830339A0A9"]
+			description: ["恭喜你完成了这个游戏，感谢你的游玩。"]
+			hide: true
+			icon: "gtlcore:ultimate_tea"
+			id: "503A37C31E60684B"
+			rewards: [{
+				id: "76A7B329CDF35304"
+				item: "gtlcore:ultimate_tea"
+				type: "item"
+			}]
+			tasks: [{
+				id: "334CC982B1A39C03"
+				item: "expatternprovider:fishbig"
+				type: "item"
+			}]
+			title: "终于，结束了"
+			x: 16.5d
+			y: 2.5d
 		}
 	]
 	subtitle: ["Tier14-MAX"]

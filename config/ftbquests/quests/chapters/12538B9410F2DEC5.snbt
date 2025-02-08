@@ -35,6 +35,7 @@
 				"5E9E2F25AE1EC731"
 			]
 			description: ["适合做生物研究"]
+			icon_scale: 2.0d
 			id: "04B1D03A3FE114F1"
 			tasks: [
 				{
@@ -63,6 +64,7 @@
 				"5D980DBF92017008"
 			]
 			description: ["更进一步"]
+			icon_scale: 2.0d
 			id: "77759D1FE48F958B"
 			shape: "rsquare"
 			size: 2.0d
@@ -97,7 +99,7 @@
 				item: "gtceu:wetware_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.5d
 			y: 4.0d
 		}
 		{
@@ -129,8 +131,9 @@
 		{
 			dependencies: [
 				"64EAB77978C87CE9"
-				"051792ED136C96D0"
+				"7EFC2C7FF6FFF1F7"
 			]
+			icon_scale: 2.0d
 			id: "46855799A4471E34"
 			tasks: [{
 				id: "0623E66A9C488A49"
@@ -143,6 +146,7 @@
 		{
 			dependencies: ["46855799A4471E34"]
 			description: ["使用有机培养的干细胞与电子刺激相互作用，快速执行大规模计算。"]
+			icon_scale: 2.0d
 			id: "425D7CD010B9C90E"
 			tasks: [{
 				id: "1C1B32F4B3E713A2"
@@ -154,6 +158,7 @@
 		}
 		{
 			dependencies: ["425D7CD010B9C90E"]
+			icon_scale: 2.0d
 			id: "582AFD622AA67792"
 			tasks: [{
 				id: "63AC52623C55FBD6"
@@ -165,6 +170,7 @@
 		}
 		{
 			dependencies: ["582AFD622AA67792"]
+			icon_scale: 2.0d
 			id: "7CF037F2C4BF55B5"
 			shape: "rsquare"
 			size: 2.0d
@@ -200,6 +206,7 @@
 		}
 		{
 			dependencies: ["38D23D186C444492"]
+			icon_scale: 2.0d
 			id: "59CA7B4A4A417B53"
 			tasks: [{
 				id: "660C7300DF6A9A97"
@@ -230,17 +237,20 @@
 				"7CF037F2C4BF55B5"
 				"5E86110BBAEA92BA"
 			]
+			icon_scale: 2.0d
 			id: "0A2D46609F5C3CAB"
 			tasks: [{
 				id: "31A360FB27D6251A"
 				item: "gtceu:wetware_processor_mainframe"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
+			description: ["在下个阶段需要很多"]
+			icon_scale: 2.0d
 			id: "5D4131C48F9BAE46"
 			shape: "rsquare"
 			tasks: [{
@@ -270,6 +280,7 @@
 		{
 			dependencies: ["0A2D46609F5C3CAB"]
 			description: ["更长，更快，无需有序"]
+			icon_scale: 2.0d
 			id: "172FC2F2B20CD187"
 			shape: "rsquare"
 			size: 1.0d
@@ -282,18 +293,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0A2D46609F5C3CAB"]
-			description: ["后面的电路装配线要使用"]
-			id: "1385E89DD3FD663B"
-			tasks: [{
-				id: "68A5969FB9056BA3"
-				item: "kubejs:precision_circuit_assembly_robot_mk1"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 8.0d
-		}
-		{
 			dependencies: [
 				"38D23D186C444492"
 				"62D2B830A98424BB"
@@ -302,6 +301,7 @@
 				"一台计算机提供的算力是不够的，如果要合并算力就需要这台机器"
 				"在使用前确保计算机上安装了桥接组件"
 			]
+			icon_scale: 2.0d
 			id: "5E86110BBAEA92BA"
 			shape: "rsquare"
 			size: 2.0d
@@ -318,7 +318,8 @@
 				"5D4131C48F9BAE46"
 				"7C4C11E7C931C01B"
 			]
-			description: ["可以高速处理mk3前的聚变配方，有轻微损耗。"]
+			description: ["以后需要"]
+			icon_scale: 2.0d
 			id: "2802E34A99CE1D79"
 			shape: "rsquare"
 			size: 1.0d
@@ -370,7 +371,7 @@
 				item: "gtceu:integrated_ore_processor"
 				type: "item"
 			}]
-			x: 5.5d
+			x: 13.0d
 			y: 8.0d
 		}
 		{
@@ -384,7 +385,7 @@
 				item: "gtceu:petrochemical_plant"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 14.0d
 			y: 8.0d
 		}
 		{
@@ -393,6 +394,7 @@
 				"04B1D03A3FE114F1"
 			]
 			description: ["前往太阳系之外"]
+			icon_scale: 2.0d
 			id: "7FD1D1D8ED72D40C"
 			rewards: [{
 				id: "4BCD53BFF7E94B0A"
@@ -451,11 +453,12 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["02F523E003E1C93D"]
 			description: ["大批量纳米机器人生产"]
+			icon_scale: 2.0d
 			id: "3B098EA4601A7827"
 			tasks: [{
 				id: "429C36800C493E79"
@@ -467,6 +470,7 @@
 		}
 		{
 			dependencies: ["5E9E2F25AE1EC731"]
+			icon_scale: 2.0d
 			id: "6C24E5BA18FE8CF5"
 			tasks: [
 				{
@@ -484,35 +488,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"02F523E003E1C93D"
-				"035C470213E8B4DB"
-			]
-			description: ["优化你的产线"]
-			id: "16C93F76F74CB8DB"
-			tasks: [{
-				id: "42B8B94BB1B32E83"
-				item: "gtceu:chemical_distort"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0A2D46609F5C3CAB"]
-			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
-			id: "3565D2D5E0A2CEDF"
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "30D756E7388280AB"
-				item: "gtceu:superconducting_electromagnetism"
-				type: "item"
-			}]
-			x: 11.0d
-			y: 8.0d
-		}
-		{
 			dependencies: ["0485D45408234C99"]
 			id: "5D980DBF92017008"
 			tasks: [{
@@ -522,6 +497,164 @@
 			}]
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["051792ED136C96D0"]
+			id: "7EFC2C7FF6FFF1F7"
+			tasks: [{
+				id: "1BB25071E7E00C66"
+				item: "gtceu:wetware_printed_circuit_board"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7EFC2C7FF6FFF1F7"]
+			id: "5C4B11CEA53D5B78"
+			tasks: [{
+				id: "4B5ADAE9ED77C366"
+				item: {
+					Count: 1
+					id: "gtceu:data_module"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5C4B11CEA53D5B78"]
+			description: ["含有无法挖掘的矿物"]
+			icon_scale: 2.0d
+			id: "6DDE77C23FC5D067"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "0F730F8E535FA432"
+				item: "gtceu:large_void_miner"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5C4B11CEA53D5B78"]
+			description: ["效率更高"]
+			icon_scale: 2.0d
+			id: "52980D117AB477B2"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2E8C86DE512279CC"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
+			title: "来自虚空"
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"53D0B2B73387C7CE"
+				"042A0E98DC1084B3"
+			]
+			description: [" 磁共振电路！启动！"]
+			id: "0DC5BFACB3D4BC95"
+			tasks: [{
+				id: "4A9623D2D33B88B9"
+				item: "gtceu:magneto_resonatic_dust"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6DDE77C23FC5D067"]
+			description: ["锆在木卫三，另一个只能虚空采矿了"]
+			id: "042A0E98DC1084B3"
+			tasks: [
+				{
+					id: "0B436E19F0479E87"
+					item: "gtceu:zirconium_dust"
+					type: "item"
+				}
+				{
+					id: "3EE902C024F94F0D"
+					item: "gtceu:tellurium_dust"
+					type: "item"
+				}
+			]
+			title: "锆与碲"
+			x: 14.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0485D45408234C99"]
+			description: [
+				"这个时候你也可以做大型的"
+				""
+				"还有一个叫方块转换室和一个叫转换模拟卡的东西"
+			]
+			hide_dependency_lines: true
+			icon_scale: 2.0d
+			id: "41201C74CC5F7B90"
+			tasks: [{
+				id: "569902AC45012A06"
+				item: "gtceu:block_conversion_room"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["41201C74CC5F7B90"]
+			id: "35D158AD5036923D"
+			tasks: [{
+				id: "7A39828F0956F250"
+				item: "kubejs:essence"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["35D158AD5036923D"]
+			description: ["各种矿脉精华用于大型虚空采矿场的精准模式"]
+			id: "68D3E6670941A3F5"
+			tasks: [{
+				id: "158FBB1423A51456"
+				title: "各种的矿脉精华"
+				type: "checkmark"
+			}]
+			x: 14.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["62D2B830A98424BB"]
+			icon_scale: 2.0d
+			id: "41C7A298C421C65D"
+			tasks: [{
+				id: "113219BE64EFCAB0"
+				item: "gtceu:mega_blast_furnace"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["62D2B830A98424BB"]
+			icon_scale: 2.0d
+			id: "237F6A0B77986D56"
+			tasks: [{
+				id: "2E4DE5399833ED46"
+				item: "gtceu:mega_alloy_blast_smelter"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier7-ZPM"]

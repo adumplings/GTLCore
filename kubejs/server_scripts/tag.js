@@ -1,5 +1,19 @@
 //priority: 100
-const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
+const tiers = [["ulv", 0 , "gtceu"],
+               ["lv", 1 , "gtceu"], 
+               ["mv", 2 , "gtceu"], 
+               ["hv", 3 , "gtceu"], 
+               ["ev", 4 , "gtceu"], 
+               ["iv", 5 , "gtceu"],
+               ["luv", 6 , "gtceu"], 
+               ["zpm", 7 , "gtceu"], 
+               ["uv", 8 , "gtceu"], 
+               ["uhv", 9 , "gtceu"], 
+               ["uev", 10 , "gtceu"], 
+               ["uiv", 11 , "gtceu"], 
+               ["uxv", 12 , "gtceu"], 
+               ["opv", 13 , "gtceu"], 
+               ["max", 14 , "gtlcore"]]
 ServerEvents.tags("item", event => {
     const items = [
         "ae2:certus_quartz_crystal",

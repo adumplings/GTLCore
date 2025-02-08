@@ -15,15 +15,15 @@ ServerEvents.recipes((event) => {
         "type": "avaritia:shaped_extreme_craft",
         "category": "misc",
         "pattern": [
-            "J  ACA  J",
-            "   ADA   ",
-            "  ABABA  ",
-            " ABBBBBA ",
-            "AEABFBAGA",
-            " ABBBBBA ",
-            "  ABABA  ",
-            " AHA AIA ",
-            "J A   A J"
+            "JJJJJJJJJ",
+            "JKKKKKKKJ",
+            "JKAACAAKJ",
+            "JKABDBAKJ",
+            "JKAEFGAKJ",
+            "JKAHBIAKJ",
+            "JKAAAAAKJ",
+            "JKKKKKKKJ",
+            "JJJJJJJJJ"
         ],
         "key": {
             "A": {
@@ -54,7 +54,10 @@ ServerEvents.recipes((event) => {
                 "item": "kubejs:fishbig_rleg"
             },
             "J": {
-                "item": "avaritia:singularity"
+                "item": "gtlcore:compressed_pufferfish"
+            },
+            "K": {
+                "item": "gtlcore:super_glue"
             }
         },
         "result": {

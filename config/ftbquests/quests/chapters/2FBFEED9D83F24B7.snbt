@@ -31,6 +31,7 @@
 				"28E04C03DD2C0854"
 			]
 			description: ["高能机器"]
+			icon_scale: 2.0d
 			id: "67588B6F4C26CF4C"
 			shape: "gear"
 			size: 1.2d
@@ -44,6 +45,7 @@
 		}
 		{
 			dependencies: ["6BB5ED6ECC43E30C"]
+			icon_scale: 2.0d
 			id: "0CCE2A9119B2B1C4"
 			tasks: [{
 				id: "59E90C6145AA300E"
@@ -61,6 +63,7 @@
 				"7C796A0CDAB038C9"
 			]
 			id: "7F79481263C17880"
+			size: 1.0d
 			tasks: [{
 				id: "47A684BB71106B1D"
 				item: "kubejs:cosmic_processing_unit_core"
@@ -75,6 +78,7 @@
 				"76B16D5AEF5AE346"
 			]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "1F1FCB0CA5696FF1"
 			tasks: [{
 				id: "7064445D4522B0F9"
@@ -90,6 +94,7 @@
 				"106303E7A3296E76"
 				"53AF03B663577CB0"
 			]
+			icon_scale: 2.0d
 			id: "28E91E5A98E3A8DD"
 			tasks: [{
 				id: "785069BBC7747ADC"
@@ -102,6 +107,7 @@
 		{
 			dependencies: ["28E91E5A98E3A8DD"]
 			description: ["在物理定律的极限下执行计算。"]
+			icon_scale: 2.0d
 			id: "596E4662227F4E38"
 			tasks: [{
 				id: "165EABF42AE36A02"
@@ -113,6 +119,7 @@
 		}
 		{
 			dependencies: ["596E4662227F4E38"]
+			icon_scale: 2.0d
 			id: "3569AD043F42762A"
 			tasks: [{
 				id: "59A8FB50CBC35EDE"
@@ -124,6 +131,7 @@
 		}
 		{
 			dependencies: ["3569AD043F42762A"]
+			icon_scale: 2.0d
 			id: "37C0845F870CC835"
 			tasks: [{
 				id: "57129B74F6D1DE2E"
@@ -139,6 +147,7 @@
 				"02401278940CE1F3"
 				"559836CC234447C0"
 			]
+			icon_scale: 2.0d
 			id: "6C6A3B91957A0B7B"
 			tasks: [{
 				id: "06F01AC2F2AAFC1A"
@@ -190,9 +199,10 @@
 				"7819969E76A18F15"
 				"0FB0AFA8DD71B19F"
 			]
+			icon_scale: 2.0d
 			id: "74D84A4928FA0A35"
 			shape: "gear"
-			size: 1.0d
+			size: 2.0d
 			tasks: [{
 				id: "2C8FACD2B8237591"
 				item: "gtceu:space_probe_surface_reception"
@@ -217,9 +227,10 @@
 			dependencies: ["1DAE3D00F91134F0"]
 			description: ["可以代替恒星锻炉"]
 			icon: "gtceu:dimensionally_transcendent_plasma_forge"
+			icon_scale: 2.0d
 			id: "2880531AF7540B24"
 			shape: "gear"
-			size: 1.2d
+			size: 2.0d
 			tasks: [
 				{
 					id: "2CA90B99536E4896"
@@ -323,6 +334,7 @@
 			dependencies: [
 				"678E707F85CD2071"
 				"0D4ACF1CF1489C8D"
+				"6FE5409DB7A22427"
 			]
 			id: "5405B22C3320841E"
 			tasks: [{
@@ -336,6 +348,7 @@
 		{
 			dependencies: ["6D6BE75CB79C7901"]
 			description: ["强力混合"]
+			icon_scale: 2.0d
 			id: "29A581C935A339DD"
 			shape: "gear"
 			size: 1.0d
@@ -395,7 +408,9 @@
 				"5FFDF6751BFBD4BF"
 				"208FB88A70036325"
 			]
+			icon_scale: 2.0d
 			id: "078ADC3E0F3A6746"
+			size: 1.0d
 			tasks: [{
 				id: "10E756E205893B29"
 				item: "kubejs:photocoated_hassium_wafer"
@@ -540,6 +555,19 @@
 			}]
 			x: 0.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["6BB5ED6ECC43E30C"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "6FE5409DB7A22427"
+			tasks: [{
+				id: "171F2644EC61E4C2"
+				item: "gtceu:grade_16_purified_water_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier11-UIV"]

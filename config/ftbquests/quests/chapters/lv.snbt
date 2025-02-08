@@ -123,6 +123,7 @@
 			dependencies: ["0223A643A5066452"]
 			description: ["让你更加高效的获得导线和细导线"]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "0CF19CAFB3355075"
 			rewards: [{
 				id: "2AC3B6BF675F4682"
@@ -144,6 +145,7 @@
 			]
 			description: ["让你更高效的获得板和箔，一锭出一板，一锭出四箔"]
 			hide_dependent_lines: true
+			icon_scale: 2.0d
 			id: "3DC0B933936357B3"
 			rewards: [{
 				id: "5722F9FCDB566036"
@@ -164,6 +166,7 @@
 				"29A8EC2EB3240278"
 			]
 			description: ["让你更高效的获得杆和螺丝，一锭出两杆，一螺栓出一螺丝"]
+			icon_scale: 2.0d
 			id: "048455FFC9BDC82A"
 			rewards: [{
 				id: "4B27D0AEB350794A"
@@ -203,7 +206,7 @@
 				"198ED0A20800F3ED"
 				"20F6BF1EDC6EBDC1"
 			]
-			description: ["你需要在高炉上放两个LV能源仓以将高炉超频到MV，这样它可以运行MV的配方"]
+			description: ["你需要在高炉上放两个LV能源仓以将高炉升压到MV，这样它可以运行MV的配方"]
 			icon_scale: 2.0d
 			id: "07D0D7005DA4F446"
 			rewards: [{
@@ -289,6 +292,7 @@
 				"7F9F473B8C508676"
 				"36E33432C72763C8"
 			]
+			icon_scale: 2.0d
 			id: "20F6BF1EDC6EBDC1"
 			rewards: [{
 				id: "0368C7A8382A16D9"
@@ -482,6 +486,7 @@
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
+			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
 				id: "298A039260B352D6"
@@ -496,6 +501,7 @@
 				"0877362A9EE36FB3"
 				"006BBE4D312A2E2E"
 			]
+			icon_scale: 2.0d
 			id: "7D399E31506924A0"
 			rewards: [{
 				id: "005FED5AFFB39EE8"
@@ -512,13 +518,14 @@
 		}
 		{
 			dependencies: ["7D399E31506924A0"]
+			icon_scale: 2.0d
 			id: "40C39645B1DE2488"
 			rewards: [{
 				id: "1AD5EB109E14A85F"
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "348825C79AD479CA"
@@ -779,13 +786,14 @@
 				"54034055F57DDAA5"
 				"49ABB341017BAE85"
 			]
+			icon_scale: 2.0d
 			id: "388E5C1034C54D19"
 			rewards: [{
 				id: "2DC114FA32688047"
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "08CFFDE3C82C9FCF"
@@ -910,6 +918,7 @@
 				"40C39645B1DE2488"
 				"0037D6BA6A4ABB72"
 			]
+			icon_scale: 2.0d
 			id: "033DE57F0D91698C"
 			tasks: [{
 				id: "139820782C4C2E96"
@@ -922,6 +931,7 @@
 		{
 			dependencies: ["40C39645B1DE2488"]
 			id: "45321051E19D5C25"
+			optional: true
 			rewards: [{
 				id: "377A2142C44ADB94"
 				item: "gtceu:silver_credit"
@@ -1015,7 +1025,7 @@
 		}
 		{
 			dependencies: ["1715EF3BF00D33B7"]
-			description: ["可能出现未知bug，非必要不用使用，可以使用合成卡代替"]
+			description: ["建议断开网络写，写好再连接网络"]
 			id: "07758FA2615B7559"
 			tasks: [{
 				id: "5BAF8D0B28FC21AE"
@@ -1037,7 +1047,11 @@
 		}
 		{
 			dependencies: ["033DE57F0D91698C"]
-			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
+			description: [
+				"有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"
+				""
+				"一共有33个，每个电路都是单独的，你需要做一些。"
+			]
 			id: "471C9A591D5CF776"
 			tasks: [{
 				id: "6E1C628F99BD3D93"
@@ -1114,6 +1128,7 @@
 					Configuration: 0
 				}
 			}
+			icon_scale: 2.0d
 			id: "51A6B6CDC90D7E76"
 			rewards: [{
 				id: "7AFF24BD5E9724BE"
@@ -1130,6 +1145,7 @@
 		}
 		{
 			dependencies: ["4C591AA4F1D907C1"]
+			description: ["输入，输入，维护 ，动力"]
 			id: "1486FC9F82B2E56E"
 			tasks: [{
 				id: "5EE2778F62F08653"
@@ -1141,7 +1157,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
-			description: ["注意没有流体隔离，如果需要，你可以去找GTM实现"]
+			description: ["注意没有流体隔离。"]
 			hide_dependency_lines: true
 			id: "62A978538C87ED8A"
 			rewards: [

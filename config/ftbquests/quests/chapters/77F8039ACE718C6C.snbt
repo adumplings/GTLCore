@@ -6,13 +6,19 @@
 	icon: "gtlcore:primitive_robot_arm"
 	id: "77F8039ACE718C6C"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [{
+		id: "4E8ED4704A82F154"
+		linked_quest: "376F6857ABEF60BF"
+		x: -2.0d
+		y: 4.0d
+	}]
 	quests: [
 		{
 			description: [
 				"拿到青铜锭你就可以开始蒸汽时代了"
 				"鼓起勇气迈向格雷科技的第一个电压吧！"
 			]
+			icon_scale: 2.0d
 			id: "5F5F348E3A34827E"
 			rewards: [{
 				id: "41A3ACD4F54D9969"
@@ -94,6 +100,7 @@
 				"你可以开始炼钢了"
 				"推荐&5焦煤+锻铁&r的配方"
 			]
+			icon_scale: 2.0d
 			id: "5CE50DDC960340D8"
 			rewards: [
 				{
@@ -216,13 +223,14 @@
 				"43DE0784E5D32B46"
 			]
 			description: ["用来制作电力机器，还可以用来制作仓"]
+			icon_scale: 2.0d
 			id: "7CB85061F0822830"
 			rewards: [{
 				id: "0D14C938E01BD29D"
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "6500863B6A64DE2F"
@@ -289,12 +297,19 @@
 					type: "item"
 				}
 			]
-			tasks: [{
-				dimension: "kubejs:ancient_world"
-				id: "7B798A358D3DA56B"
-				title: "远古世界"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:ancient_world"
+					id: "7B798A358D3DA56B"
+					optional_task: true
+					title: "远古世界"
+					type: "dimension"
+				}
+				{
+					id: "5570EF3E7801BFD4"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 2.0d
 		}
@@ -325,6 +340,7 @@
 				""
 				"当你在EV完成三阶火箭后你需要用它前往地狱"
 			]
+			icon_scale: 2.0d
 			id: "00579BDA1FA1BEC6"
 			rewards: [{
 				id: "51AF08C499E8329A"
@@ -430,6 +446,7 @@
 				"388BD32463FA905D"
 			]
 			description: ["你的第一颗ULV电路，你需要用它帮忙做更便宜的，做几个就够了"]
+			icon_scale: 2.0d
 			id: "5CD26DECB937FC71"
 			rewards: [{
 				id: "327EC9AD42261D00"
@@ -543,6 +560,7 @@
 				"5CD26DECB937FC71"
 			]
 			description: ["原始人也要组装电路"]
+			icon_scale: 2.0d
 			id: "34FCFA114E75D770"
 			rewards: [{
 				id: "0C0731B2ACDDCE0D"
@@ -584,6 +602,7 @@
 				"5276CA8FA5262C9B"
 				"38CC43F7A6A39BB4"
 			]
+			icon_scale: 2.0d
 			id: "2585418910B6798A"
 			rewards: [{
 				id: "372783FB309C5A6A"
@@ -628,6 +647,7 @@
 				""
 				"你其实可以用蒸汽大电装做的"
 			]
+			icon_scale: 2.0d
 			id: "5065BEDC95AE564E"
 			min_required_dependencies: 2
 			rewards: [{
@@ -730,6 +750,7 @@
 				"06285BE2396AB639"
 			]
 			description: ["更加便宜的电路，这个系列一直到EV"]
+			icon_scale: 2.0d
 			id: "08B7D8F835DFE214"
 			rewards: [{
 				id: "79AC4D19DF1054D1"
@@ -750,13 +771,14 @@
 				"5065BEDC95AE564E"
 			]
 			description: ["这个是便宜的LV电路"]
+			icon_scale: 2.0d
 			id: "553B2D61416792DC"
 			rewards: [{
 				id: "5FCCD0A40F20BB43"
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
-			shape: "rsquare"
+			shape: "circle"
 			size: 2.0d
 			tasks: [{
 				id: "41CA550B62F920A6"
@@ -773,11 +795,18 @@
 				"从现在开始你就可以开始发展了"
 			]
 			id: "6E69F45AEA66D5ED"
-			rewards: [{
-				id: "5C30500B7291441C"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "5C30500B7291441C"
+					item: "gtceu:cupronickel_credit"
+					type: "item"
+				}
+				{
+					id: "6CE1DC92795F5890"
+					item: "ae2:guide"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "76E9DDCCC307F224"
 				title: "AE2"
@@ -788,7 +817,11 @@
 		}
 		{
 			dependencies: ["553B2D61416792DC"]
-			description: ["青铜蒸汽锅炉经过了史诗级加强，你可以不需要思考用蒸汽发电到HV（HV需要多堆几台）"]
+			description: [
+				"青铜蒸汽锅炉经过了史诗级加强，你可以不需要思考用蒸汽发电到HV（HV需要多堆几台）"
+				"维护仓在前期需要手动维护"
+			]
+			icon_scale: 2.0d
 			id: "328D5CF265FCCCA3"
 			rewards: [{
 				id: "02EE5681EA132E6A"
@@ -828,6 +861,7 @@
 		{
 			dependencies: ["5CE50DDC960340D8"]
 			description: ["瞬间获得产物"]
+			icon_scale: 2.0d
 			id: "0662E205D1783D31"
 			rewards: [
 				{
@@ -856,6 +890,7 @@
 		{
 			dependencies: ["1AB03D24332B722E"]
 			description: ["强力熔炉，蒸汽消耗也少"]
+			icon_scale: 2.0d
 			id: "0532330B52D98469"
 			rewards: [{
 				id: "142C72A3F57D1D8C"
@@ -930,16 +965,17 @@
 		{
 			dependencies: ["5F5F348E3A34827E"]
 			description: [
-				"蒸汽多方块需要放入蒸汽输入仓来提供蒸汽"
-				"一般情况下物品需要蒸汽输入总线和蒸汽输出总线，具体查看JEI"
+				"蒸汽多方块需要放入&b蒸汽输入仓&r来提供蒸汽"
+				"一般情况下物品需要&b蒸汽输入总线&r和&b蒸汽输出总线&r，具体查看JEI"
 				"流体使用输入仓和输出仓"
 				"大型的蒸汽多方块都有64的并行，并且处理速度是LV机器的2倍"
 				"非大型的蒸汽多方块为8并行"
-				"蒸汽多方块的外壳可以到小市场购买"
+				"&e蒸汽多方块的外壳可以到小市场购买&r"
 				"大型蒸汽多方块满并行工作时蒸汽消耗特别大，需要用时空管道或激光节点等高速流体传输手段来提供蒸汽，否则会跳蒸汽"
 			]
 			hide_dependent_lines: true
 			icon: "gtceu:steam_piston_hammer"
+			icon_scale: 2.0d
 			id: "05BB1E1E38478F26"
 			rewards: [
 				{
@@ -1007,6 +1043,10 @@
 			y: 2.0d
 		}
 		{
+			description: [
+				"没有电的时候可以先用手摇曲柄供能"
+				"或者做一个谐振仓"
+			]
 			id: "664C46D5C12E7255"
 			rewards: [
 				{
@@ -1033,6 +1073,7 @@
 			dependencies: ["6E69F45AEA66D5ED"]
 			icon: "ae2:drive"
 			id: "007BBB3D4E349869"
+			optional: true
 			rewards: [
 				{
 					id: "6B14C1D1A61EFD20"
@@ -1196,6 +1237,7 @@
 		{
 			dependencies: ["6E69F45AEA66D5ED"]
 			id: "144AC3BC2AA25E63"
+			optional: true
 			rewards: [{
 				id: "037A6AECE7DF8FF6"
 				item: "gtceu:cupronickel_credit"

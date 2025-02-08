@@ -17,9 +17,16 @@
 	}
 	id: "6C61A50CA7CB2D5C"
 	order_index: 5
-	quest_links: [ ]
+	quest_links: [{
+		id: "7476D5287FB73239"
+		linked_quest: "335ED39019FC62E7"
+		x: 0.0d
+		y: 3.5d
+	}]
 	quests: [
 		{
+			dependencies: ["1A48D2DB936FF632"]
+			icon_scale: 2.0d
 			id: "043B581110AB9161"
 			shape: "rsquare"
 			size: 2.0d
@@ -42,6 +49,7 @@
 				"0D865B38481F3106"
 			]
 			description: [""]
+			icon_scale: 2.0d
 			id: "18A773A6B710C658"
 			shape: "rsquare"
 			size: 2.0d
@@ -264,6 +272,8 @@
 		}
 		{
 			dependencies: ["18A773A6B710C658"]
+			icon: "ad_astra:moon_stone"
+			icon_scale: 2.0d
 			id: "23C2F99FC949AF0A"
 			rewards: [{
 				id: "5A008F62E47D1126"
@@ -276,11 +286,19 @@
 				}
 				type: "item"
 			}]
-			tasks: [{
-				dimension: "ad_astra:moon"
-				id: "2CCD7DD07A345FE5"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:moon"
+					id: "2CCD7DD07A345FE5"
+					optional_task: true
+					type: "dimension"
+				}
+				{
+					id: "560602E8EACC8B7A"
+					item: "ad_astra:moon_cobblestone"
+					type: "item"
+				}
+			]
 			title: "月球"
 			x: 9.0d
 			y: 0.0d
@@ -290,6 +308,7 @@
 				"1AF18E39A3A062EC"
 				"33BF09337B6A9E03"
 			]
+			icon_scale: 2.0d
 			id: "683F6BF5F0151288"
 			shape: "rsquare"
 			size: 2.0d
@@ -342,7 +361,6 @@
 				}
 				{
 					id: "290ECF45289E9905"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -361,7 +379,6 @@
 				}
 				{
 					id: "0010D9422789330C"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -380,7 +397,6 @@
 				}
 				{
 					id: "0C2E89B247E0E85E"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -405,7 +421,6 @@
 				}
 				{
 					id: "412EC917430435D6"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -425,7 +440,6 @@
 				}
 				{
 					id: "55034866BAB8E55C"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -446,13 +460,23 @@
 		}
 		{
 			dependencies: ["683F6BF5F0151288"]
+			icon: "ad_astra:mars_stone"
+			icon_scale: 2.0d
 			id: "702471643821B0DE"
-			tasks: [{
-				dimension: "ad_astra:mars"
-				id: "7429ACF48E70AF34"
-				title: "火星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:mars"
+					id: "7429ACF48E70AF34"
+					optional_task: true
+					title: "火星"
+					type: "dimension"
+				}
+				{
+					id: "0AB08618956CA74F"
+					item: "ad_astra:mars_cobblestone"
+					type: "item"
+				}
+			]
 			x: 17.0d
 			y: 0.0d
 		}
@@ -473,6 +497,7 @@
 				"32E0200043820896"
 				"1C5997EE2E91844A"
 			]
+			icon_scale: 2.0d
 			id: "5F482FD80B1E9CB3"
 			shape: "rsquare"
 			size: 2.0d
@@ -534,7 +559,6 @@
 				}
 				{
 					id: "408E65A78F512D05"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -556,7 +580,6 @@
 				}
 				{
 					id: "5971D89094BE2377"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -575,7 +598,6 @@
 				}
 				{
 					id: "1477EA302B7D2C87"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -594,7 +616,6 @@
 				}
 				{
 					id: "40B7B5E346EE96BE"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -614,7 +635,6 @@
 				}
 				{
 					id: "08D8871D66256B70"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -633,7 +653,6 @@
 				}
 				{
 					id: "58879157D53270F7"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -656,7 +675,6 @@
 				}
 				{
 					id: "5ED7461DEB480E59"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -675,7 +693,6 @@
 				}
 				{
 					id: "5B062BEDA570EC35"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -694,7 +711,6 @@
 				}
 				{
 					id: "62D498D596792A96"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -703,25 +719,45 @@
 		}
 		{
 			dependencies: ["5F482FD80B1E9CB3"]
+			icon: "ad_astra:venus_stone"
+			icon_scale: 2.0d
 			id: "602F48807D4A89A6"
-			tasks: [{
-				dimension: "ad_astra:venus"
-				id: "6120571D7D2195C0"
-				title: "金星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:venus"
+					id: "6120571D7D2195C0"
+					optional_task: true
+					title: "金星"
+					type: "dimension"
+				}
+				{
+					id: "78B145B588D4A27E"
+					item: "ad_astra:venus_cobblestone"
+					type: "item"
+				}
+			]
 			x: 27.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5F482FD80B1E9CB3"]
+			icon: "ad_astra:mercury_stone"
+			icon_scale: 2.0d
 			id: "240EDC34562E580F"
-			tasks: [{
-				dimension: "ad_astra:mercury"
-				id: "75BE9C3C745B47E6"
-				title: "水星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:mercury"
+					id: "75BE9C3C745B47E6"
+					optional_task: true
+					title: "水星"
+					type: "dimension"
+				}
+				{
+					id: "4F66F12F3196F92E"
+					item: "ad_astra:mercury_cobblestone"
+					type: "item"
+				}
+			]
 			x: 28.0d
 			y: 0.0d
 		}
@@ -745,6 +781,7 @@
 				"04681E3BD6F2CF5F"
 				"3CB4691B75D15158"
 			]
+			icon_scale: 2.0d
 			id: "27A7B0A7984A95E2"
 			shape: "rsquare"
 			size: 2.0d
@@ -828,7 +865,6 @@
 				}
 				{
 					id: "141E95011AA0739D"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -837,18 +873,29 @@
 		}
 		{
 			dependencies: ["27A7B0A7984A95E2"]
+			icon: "kubejs:ceresstone"
+			icon_scale: 2.0d
 			id: "5010011959CF5337"
-			tasks: [{
-				dimension: "kubejs:ceres"
-				id: "4661CE23F70EE69E"
-				title: "谷神星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:ceres"
+					id: "4661CE23F70EE69E"
+					optional_task: true
+					title: "谷神星"
+					type: "dimension"
+				}
+				{
+					id: "7555B3FDBAE2F20D"
+					item: "kubejs:ceresstone"
+					type: "item"
+				}
+			]
 			x: 38.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["602F48807D4A89A6"]
+			icon_scale: 2.0d
 			id: "2BB52D1C09C418A9"
 			tasks: [{
 				id: "7EC35064B342F50D"
@@ -1172,13 +1219,23 @@
 				"终于可以去下界了"
 				"使用远古反应核，相邻放金块角落放绿宝石块"
 			]
+			icon: "minecraft:nether_wart"
+			icon_scale: 2.0d
 			id: "778546543F6413E7"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				id: "46F65CA6CFE50917"
-				title: "地狱"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "46F65CA6CFE50917"
+					optional_task: true
+					title: "地狱"
+					type: "dimension"
+				}
+				{
+					id: "40B56454D2D9C8CC"
+					item: "minecraft:nether_wart"
+					type: "item"
+				}
+			]
 			x: 29.0d
 			y: 2.0d
 		}
@@ -1189,6 +1246,7 @@
 				"1DD2166E800E4311"
 				"75A54472EEAF6BB0"
 			]
+			icon_scale: 2.0d
 			id: "459ADFC4C826B296"
 			shape: "rsquare"
 			size: 2.0d
@@ -1287,6 +1345,7 @@
 				"2E21FB9E04F9C325"
 				"191930A854469664"
 			]
+			icon_scale: 2.0d
 			id: "045213D417DE5A75"
 			shape: "rsquare"
 			size: 2.0d
@@ -1382,6 +1441,7 @@
 				"7B19818378510998"
 				"72ED3FB127914FD7"
 			]
+			icon_scale: 2.0d
 			id: "7F2F3993847A837B"
 			shape: "rsquare"
 			size: 2.0d
@@ -1430,25 +1490,45 @@
 		}
 		{
 			dependencies: ["459ADFC4C826B296"]
+			icon: "kubejs:iostone"
+			icon_scale: 2.0d
 			id: "73613E3EBEFFB326"
-			tasks: [{
-				dimension: "kubejs:io"
-				id: "322F6EC282672EDF"
-				title: "木卫一"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:io"
+					id: "322F6EC282672EDF"
+					optional_task: true
+					title: "木卫一"
+					type: "dimension"
+				}
+				{
+					id: "15E9748008958D52"
+					item: "kubejs:iostone"
+					type: "item"
+				}
+			]
 			x: 12.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["459ADFC4C826B296"]
+			icon: "kubejs:ganymedestone"
+			icon_scale: 2.0d
 			id: "761877FE2F5E2E2E"
-			tasks: [{
-				dimension: "kubejs:ganymede"
-				id: "1C809A36C617A480"
-				title: "木卫三"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:ganymede"
+					id: "1C809A36C617A480"
+					optional_task: true
+					title: "木卫三"
+					type: "dimension"
+				}
+				{
+					id: "65AC27BA85204DB0"
+					item: "kubejs:ganymedestone"
+					type: "item"
+				}
+			]
 			x: 13.5d
 			y: 8.0d
 		}
@@ -1514,43 +1594,74 @@
 		}
 		{
 			dependencies: ["045213D417DE5A75"]
+			icon: "kubejs:plutostone"
+			icon_scale: 2.0d
 			id: "61140578961B01A9"
-			tasks: [{
-				dimension: "kubejs:pluto"
-				id: "31DA86E1A97BF813"
-				title: "冥王星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:pluto"
+					id: "31DA86E1A97BF813"
+					optional_task: true
+					title: "冥王星"
+					type: "dimension"
+				}
+				{
+					id: "6C5FCBBCCD24040E"
+					item: "kubejs:plutostone"
+					type: "item"
+				}
+			]
 			x: 23.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["045213D417DE5A75"]
+			icon: "kubejs:enceladusstone"
+			icon_scale: 2.0d
 			id: "22B38057B7705160"
-			tasks: [{
-				dimension: "kubejs:enceladus"
-				id: "41C8995FDDD8DF81"
-				title: "土卫二"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:enceladus"
+					id: "41C8995FDDD8DF81"
+					optional_task: true
+					title: "土卫二"
+					type: "dimension"
+				}
+				{
+					id: "5BF9CBFA9E400E52"
+					item: "kubejs:enceladusstone"
+					type: "item"
+				}
+			]
 			x: 24.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["045213D417DE5A75"]
+			icon: "kubejs:titanstone"
+			icon_scale: 2.0d
 			id: "7E8D49D03B9CF783"
-			tasks: [{
-				dimension: "kubejs:titan"
-				id: "2660E03A1F112547"
-				title: "土卫六"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:titan"
+					id: "2660E03A1F112547"
+					optional_task: true
+					title: "土卫六"
+					type: "dimension"
+				}
+				{
+					id: "4A144A8E63383664"
+					item: "kubejs:titanstone"
+					type: "item"
+				}
+			]
 			x: 25.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["61140578961B01A9"]
 			description: ["左手手持末地数据，右手末地之眼，各消耗一个点亮一次"]
+			icon_scale: 2.0d
 			id: "2AE3DE0BC3CD1D5B"
 			tasks: [{
 				id: "0F4C07DD6A1BB112"
@@ -1562,13 +1673,23 @@
 		}
 		{
 			dependencies: ["2AE3DE0BC3CD1D5B"]
+			icon: "minecraft:dragon_head"
+			icon_scale: 2.0d
 			id: "5E3EDA6C94CEC3C4"
-			tasks: [{
-				dimension: "minecraft:the_end"
-				id: "0FC672E8CA7E4414"
-				title: "末地"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "0FC672E8CA7E4414"
+					optional_task: true
+					title: "末地"
+					type: "dimension"
+				}
+				{
+					id: "01FF8004FA2CF00E"
+					item: "minecraft:dragon_head"
+					type: "item"
+				}
+			]
 			x: 26.0d
 			y: 10.0d
 		}
@@ -1582,7 +1703,7 @@
 			}]
 			title: "冥王星的流体矿脉"
 			x: 23.0d
-			y: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["22B38057B7705160"]
@@ -1601,7 +1722,7 @@
 			]
 			title: "土卫二的流体矿脉"
 			x: 24.0d
-			y: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7E8D49D03B9CF783"]
@@ -1625,22 +1746,33 @@
 			]
 			title: "土卫六的流体矿脉"
 			x: 25.0d
-			y: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7F2F3993847A837B"]
+			icon: "ad_astra:glacio_stone"
+			icon_scale: 2.0d
 			id: "25AA088531768F81"
-			tasks: [{
-				dimension: "ad_astra:glacio"
-				id: "7016F7E78116220B"
-				title: "霜原星"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:glacio"
+					id: "7016F7E78116220B"
+					optional_task: true
+					title: "霜原星"
+					type: "dimension"
+				}
+				{
+					id: "3ED53E0C61B41595"
+					item: "ad_astra:glacio_cobblestone"
+					type: "item"
+				}
+			]
 			x: 31.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["25AA088531768F81"]
+			icon_scale: 2.0d
 			id: "76EA305BEB66FA42"
 			tasks: [{
 				id: "3F23E72784A107E4"
@@ -1666,6 +1798,8 @@
 		}
 		{
 			dependencies: ["5A185A4065DD7FCF"]
+			description: ["需要   一号电路   128算力"]
+			icon_scale: 2.0d
 			id: "60FA18C7093410F8"
 			shape: "rsquare"
 			size: 2.0d
@@ -1679,13 +1813,23 @@
 		}
 		{
 			dependencies: ["60FA18C7093410F8"]
+			icon: "kubejs:barnarda_log"
+			icon_scale: 2.0d
 			id: "7796B2AE8F20C564"
-			tasks: [{
-				dimension: "kubejs:barnarda"
-				id: "4C86D85114E0D472"
-				title: "巴纳德C"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "kubejs:barnarda"
+					id: "4C86D85114E0D472"
+					optional_task: true
+					title: "巴纳德C"
+					type: "dimension"
+				}
+				{
+					id: "03FE5121F10BA46D"
+					item: "kubejs:barnarda_log"
+					type: "item"
+				}
+			]
 			x: 38.0d
 			y: 8.0d
 		}
@@ -1931,19 +2075,8 @@
 			y: 6.0d
 		}
 		{
-			id: "2917E1F587244EAA"
-			tasks: [{
-				dimension: "kubejs:ancient_world"
-				id: "0CECD4BAC6C3D2A4"
-				title: "远古世界"
-				type: "dimension"
-			}]
-			x: 0.0d
-			y: 4.0d
-		}
-		{
 			can_repeat: true
-			dependencies: ["2917E1F587244EAA"]
+			dependencies: ["335ED39019FC62E7"]
 			description: ["让你方便一点"]
 			id: "2A7DCD5C4BED8E3D"
 			optional: true
@@ -1999,14 +2132,28 @@
 		}
 		{
 			dependencies: ["18A773A6B710C658"]
-			description: ["这里有着无重力条件"]
+			description: [
+				"这里有着无重力条件"
+				""
+				"制造空间站的材料为1个钢引擎，16个微型处理器超级计算机，16个航天级铁板和64个钢锭"
+			]
+			icon: "gtceu:quantum_eye"
+			icon_scale: 2.0d
 			id: "3A48F268FB265977"
-			tasks: [{
-				dimension: "ad_astra:earth_orbit"
-				id: "43A03BBB4763EE69"
-				title: "地球空间站"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					dimension: "ad_astra:earth_orbit"
+					id: "43A03BBB4763EE69"
+					optional_task: true
+					title: "地球空间站"
+					type: "dimension"
+				}
+				{
+					id: "2DC081A5022B8300"
+					item: "gtceu:quantum_eye"
+					type: "item"
+				}
+			]
 			x: 10.0d
 			y: 0.0d
 		}

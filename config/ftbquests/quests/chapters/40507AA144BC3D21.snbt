@@ -19,6 +19,7 @@
 				"0BF48314F3323108"
 				"32186EFF7020D432"
 			]
+			icon_scale: 2.0d
 			id: "3E5EBC2B23A503C1"
 			shape: "rsquare"
 			size: 2.0d
@@ -47,6 +48,7 @@
 				"365548266DF60F91"
 				"77A53FAAC098F859"
 			]
+			icon_scale: 2.0d
 			id: "45C3486A3F0EE7FB"
 			tasks: [{
 				id: "5B7BBBB311822D83"
@@ -88,6 +90,7 @@
 				"2880531AF7540B24"
 				"5A61ABB6E4917C6C"
 			]
+			icon_scale: 2.0d
 			id: "11A7CCFCEAB722F3"
 			tasks: [{
 				id: "3DCC1C5866480D9F"
@@ -127,8 +130,12 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["736395E39993F727"]
+			dependencies: [
+				"736395E39993F727"
+				"771080AF846271E3"
+			]
 			description: ["可大批量生产"]
+			icon_scale: 2.0d
 			id: "414F9C645C799FAE"
 			tasks: [{
 				id: "47061FC3050F2DB2"
@@ -144,6 +151,7 @@
 				"2A29DA4239E6BA44"
 				"3FBFE193579C28E3"
 			]
+			icon_scale: 2.0d
 			id: "0A6C5B3C148A5743"
 			tasks: [{
 				id: "702BFEED1422D1D6"
@@ -172,6 +180,7 @@
 				"04420B8E0278D7AD"
 				"45C3486A3F0EE7FB"
 			]
+			icon_scale: 2.0d
 			id: "2AFCDC0CA3205903"
 			tasks: [{
 				id: "470C4F62160DE7DA"
@@ -183,6 +192,7 @@
 		}
 		{
 			dependencies: ["00A227F06D7F109E"]
+			icon_scale: 2.0d
 			id: "622395061792FB5E"
 			tasks: [{
 				id: "049F132CCC5B262C"
@@ -194,6 +204,7 @@
 		}
 		{
 			dependencies: ["30AEBB08CE6C88BA"]
+			icon_scale: 2.0d
 			id: "2C3C46AC660CC54E"
 			tasks: [{
 				id: "6FB785AF530B06F6"
@@ -218,6 +229,7 @@
 		{
 			dependencies: ["11A7CCFCEAB722F3"]
 			description: ["可以把你的最高级别激光仓填满"]
+			icon_scale: 2.0d
 			id: "0610CD9378D8B0AD"
 			shape: "gear"
 			size: 2.0d
@@ -232,6 +244,7 @@
 		{
 			dependencies: ["63998161D9D731E7"]
 			hide_dependency_lines: false
+			icon_scale: 2.0d
 			id: "5A6EA61F3E61D086"
 			shape: "gear"
 			tasks: [{
@@ -249,6 +262,7 @@
 				"51D5E14423F35E6F"
 			]
 			description: ["耗能固定为4A MAX"]
+			icon_scale: 2.0d
 			id: "296DE95F3BE7DC54"
 			shape: "rsquare"
 			size: 2.0d
@@ -338,6 +352,7 @@
 		{
 			dependencies: ["32186EFF7020D432"]
 			description: ["非常的贵"]
+			icon_scale: 2.0d
 			id: "67EF7F1C6AE2A6C9"
 			tasks: [{
 				id: "0E0235D9CF0EAA5F"

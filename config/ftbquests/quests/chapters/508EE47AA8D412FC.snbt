@@ -463,6 +463,18 @@
 			x: -7.5d
 			y: 5.0d
 		}
+		{
+			id: "47BC730F818048E6"
+			linked_quest: "2C3C46AC660CC54E"
+			x: 15.0d
+			y: 21.5d
+		}
+		{
+			id: "4D1ADE7AE87B4699"
+			linked_quest: "414F9C645C799FAE"
+			x: 15.0d
+			y: 20.0d
+		}
 	]
 	quests: [
 		{
@@ -471,6 +483,7 @@
 				"34D6F0DF329B1877"
 			]
 			description: ["安装在超维度等离子锻炉上才能发挥作用"]
+			icon_scale: 2.0d
 			id: "11D8044BD0401E53"
 			tasks: [{
 				id: "20F532379723D90D"
@@ -481,6 +494,8 @@
 			y: -1.0d
 		}
 		{
+			dependencies: ["0DC5BFACB3D4BC95"]
+			icon_scale: 2.0d
 			id: "6FDC282122A5B02C"
 			tasks: [{
 				id: "6B6EC87CDD8D05E2"
@@ -492,6 +507,7 @@
 		}
 		{
 			dependencies: ["6FDC282122A5B02C"]
+			icon_scale: 2.0d
 			id: "646C1CCEB181849D"
 			tasks: [{
 				id: "05ED3909F6DF2267"
@@ -503,6 +519,7 @@
 		}
 		{
 			dependencies: ["646C1CCEB181849D"]
+			icon_scale: 2.0d
 			id: "2AC1D8E0FE210ECA"
 			tasks: [{
 				id: "0883B3B82134C146"
@@ -514,6 +531,7 @@
 		}
 		{
 			dependencies: ["2AC1D8E0FE210ECA"]
+			icon_scale: 2.0d
 			id: "592112D25203587D"
 			tasks: [{
 				id: "3EABC2D14C1D7929"
@@ -525,6 +543,7 @@
 		}
 		{
 			dependencies: ["592112D25203587D"]
+			icon_scale: 2.0d
 			id: "014F144FE1D44D76"
 			tasks: [{
 				id: "32F9802B6D740EB8"
@@ -536,6 +555,7 @@
 		}
 		{
 			dependencies: ["014F144FE1D44D76"]
+			icon_scale: 2.0d
 			id: "538AD958004C9735"
 			tasks: [{
 				id: "420D7E2027220B0C"
@@ -547,6 +567,7 @@
 		}
 		{
 			dependencies: ["538AD958004C9735"]
+			icon_scale: 2.0d
 			id: "72B2B688F850153C"
 			tasks: [{
 				id: "2ABE84510F3A9EDA"
@@ -558,6 +579,7 @@
 		}
 		{
 			dependencies: ["72B2B688F850153C"]
+			icon_scale: 2.0d
 			id: "2345247068AC8E96"
 			tasks: [{
 				id: "4205CF48C71A3DC8"
@@ -569,6 +591,7 @@
 		}
 		{
 			dependencies: ["2345247068AC8E96"]
+			icon_scale: 2.0d
 			id: "37F21A829C79917A"
 			tasks: [{
 				id: "6816D41E49BBC5C0"
@@ -580,6 +603,7 @@
 		}
 		{
 			dependencies: ["37F21A829C79917A"]
+			icon_scale: 2.0d
 			id: "4E5FE0D4C86C6EC3"
 			tasks: [{
 				id: "7AC9602F29EA48BF"
@@ -591,6 +615,7 @@
 		}
 		{
 			dependencies: ["4E5FE0D4C86C6EC3"]
+			icon_scale: 2.0d
 			id: "7D6D4939A8E1DE7C"
 			tasks: [{
 				id: "3AFBEEF7BC30F4CA"
@@ -602,6 +627,7 @@
 		}
 		{
 			dependencies: ["7D6D4939A8E1DE7C"]
+			icon_scale: 2.0d
 			id: "19E4FA7B41F44BDC"
 			tasks: [{
 				id: "5942973187EA50BD"
@@ -615,6 +641,7 @@
 			dependencies: ["5D8BD23AA2113DC2"]
 			description: ["这些只是现实存在的元素"]
 			icon: "gtceu:periodicium_ingot"
+			icon_scale: 2.0d
 			id: "58CCCFF70575B019"
 			rewards: [{
 				id: "31F703F6A716FA49"
@@ -628,6 +655,198 @@
 			}]
 			x: 1.5d
 			y: -1.0d
+		}
+		{
+			dependencies: ["736395E39993F727"]
+			icon_scale: 2.0d
+			id: "038B4D0C09824CC9"
+			tasks: [{
+				id: "21F728CD94FD5E2E"
+				item: "kubejs:suprachronal_ulv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["038B4D0C09824CC9"]
+			icon_scale: 2.0d
+			id: "734A0585587FCC45"
+			tasks: [{
+				id: "0B28527C4B16D04C"
+				item: "kubejs:suprachronal_lv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["734A0585587FCC45"]
+			icon_scale: 2.0d
+			id: "01F2F946EADE6386"
+			tasks: [{
+				id: "3B56C1845D55AC8B"
+				item: "kubejs:suprachronal_mv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["01F2F946EADE6386"]
+			icon_scale: 2.0d
+			id: "7174B34849778BCA"
+			tasks: [{
+				id: "16FF7764A9FADC57"
+				item: "kubejs:suprachronal_hv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7174B34849778BCA"]
+			icon_scale: 2.0d
+			id: "14E23BFD646CBD4A"
+			tasks: [{
+				id: "6BEF99E6962FC3E5"
+				item: "kubejs:suprachronal_ev"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["14E23BFD646CBD4A"]
+			icon_scale: 2.0d
+			id: "4B2D93E8BDD66170"
+			tasks: [{
+				id: "1CC32AE134661CEE"
+				item: "kubejs:suprachronal_iv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["4B2D93E8BDD66170"]
+			icon_scale: 2.0d
+			id: "20AF2AAC6D04DBEB"
+			tasks: [{
+				id: "219063D50EB7D925"
+				item: "kubejs:suprachronal_luv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["20AF2AAC6D04DBEB"]
+			icon_scale: 2.0d
+			id: "155B6106B6F3E3C6"
+			tasks: [{
+				id: "565D5D00AD82E08B"
+				item: "kubejs:suprachronal_zpm"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["155B6106B6F3E3C6"]
+			icon_scale: 2.0d
+			id: "16B8D184CBCC6EA7"
+			tasks: [{
+				id: "218BAF83AB8AA9C6"
+				item: "kubejs:suprachronal_uv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["16B8D184CBCC6EA7"]
+			icon_scale: 2.0d
+			id: "6679B323FB986C6D"
+			tasks: [{
+				id: "0E6BB7B6A0C15796"
+				item: "kubejs:suprachronal_uhv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["16B8D184CBCC6EA7"]
+			icon_scale: 2.0d
+			id: "5C972A177A96ECEF"
+			tasks: [{
+				id: "7BD5E56198CF251B"
+				item: "kubejs:suprachronal_uev"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["5C972A177A96ECEF"]
+			icon_scale: 2.0d
+			id: "531BF9450F4AAE40"
+			tasks: [{
+				id: "02B85BC14775E64A"
+				item: "kubejs:suprachronal_uiv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 15.5d
+		}
+		{
+			dependencies: ["531BF9450F4AAE40"]
+			icon_scale: 2.0d
+			id: "05C1A14049210A6C"
+			tasks: [{
+				id: "56CE4A94ABD6B6BA"
+				item: "kubejs:suprachronal_uxv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["05C1A14049210A6C"]
+			icon_scale: 2.0d
+			id: "771080AF846271E3"
+			tasks: [{
+				id: "730DF3F3003CEA81"
+				item: "kubejs:suprachronal_opv"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 18.5d
+		}
+		{
+			dependencies: ["63998161D9D731E7"]
+			icon_scale: 2.0d
+			id: "72AA3760BC57075B"
+			tasks: [{
+				id: "7526DAE85B919AAB"
+				item: "kubejs:hypogen_coil_block"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 21.5d
+		}
+		{
+			dependencies: ["0A6C5B3C148A5743"]
+			icon_scale: 2.0d
+			id: "6530A2870217FD59"
+			tasks: [{
+				id: "17041C00044AA57F"
+				item: "kubejs:eternity_coil_block"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 23.0d
 		}
 	]
 	title: "进度"

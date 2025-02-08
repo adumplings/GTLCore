@@ -2723,18 +2723,18 @@ ServerEvents.recipes((event) => {
             .CWUt(2048))
 
     const wireless_tiers = [
-        [0, "uhv", "neutronium", "europium", "kubejs:nm_chip", "8x kubejs:smd_inductor_bioware"],
-        [1, "uev", "quantanium", "mithril", "kubejs:nm_chip", "8x kubejs:smd_inductor_optical"],
-        [2, "uiv", "adamantium", "neutronium", "kubejs:pm_chip", "8x kubejs:smd_inductor_exotic"],
-        [3, "uxv", "vibranium", "taranium", "kubejs:pm_chip", "8x kubejs:smd_inductor_cosmic"],
-        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal"],
-        [5, "max", "chaos", "cosmicneutronium", "kubejs:fm_chip", "8x gtceu:shirabon_foil"]
+        [0, "uhv", "neutronium", "europium", "kubejs:nm_chip", "8x kubejs:smd_inductor_bioware", "gtceu"],
+        [1, "uev", "quantanium", "mithril", "kubejs:nm_chip", "8x kubejs:smd_inductor_optical", "gtceu"],
+        [2, "uiv", "adamantium", "neutronium", "kubejs:pm_chip", "8x kubejs:smd_inductor_exotic", "gtceu"],
+        [3, "uxv", "vibranium", "taranium", "kubejs:pm_chip", "8x kubejs:smd_inductor_cosmic", "gtceu"],
+        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal", "gtceu"],
+        [5, "max", "chaos", "cosmicneutronium", "kubejs:fm_chip", "8x gtceu:shirabon_foil", "gtlcore"]
     ]
     wireless_tiers.forEach((tier) => {
         let soldering = tier[0] < 3 ? "gtceu:mutated_living_solder 144" : "gtceu:super_mutated_living_solder 144"
         gtr.assembler(`gtmthings:${tier[1]}_wireless_energy_receive_cover`)
-            .itemInputs(`gtceu:${tier[1]}_sensor`,
-                `gtceu:${tier[1]}_emitter`,
+            .itemInputs(`${tier[6]}:${tier[1]}_sensor`,
+                `${tier[6]}:${tier[1]}_emitter`,
                 "4x gtceu:ender_pearl_plate",
                 "2x #gtceu:circuits/" + tier[1],
                 `kubejs:${tier[1]}_voltage_coil`,
@@ -2757,6 +2757,7 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[tier[0] + 9])
             .duration(200)
     })
+
     for (let index = 5; index < 15; index++) {
         let tierName = GTValues.VN[index].toLowerCase()
         gtr.assembler(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
@@ -4981,14 +4982,15 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(100)
 
-    gtr.electric_blast_furnace("gtceu:fullerene_dust")
+    gtr.laser_engraver("gtceu:fullerene_dust")
         .itemInputs("gtceu:unfolded_fullerene_dust")
+        .notConsumable("gtceu:ruby_lens")
         .inputFluids("gtceu:nitrogen 10000")
         .itemOutputs("gtceu:fullerene_dust")
         .outputFluids("gtceu:ammonia 10000")
         .EUt(2000000)
         .duration(400)
-        .blastFurnaceTemp(5000)
+        .addDataBool("special", true)
 
     gtr.large_chemical_reactor("gtceu:phenylpentanoic_acid")
         .notConsumableFluid("gtceu:trimethyltin_chloride 1000")
@@ -10788,14 +10790,15 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.electric_blast_furnace("gtceu:lanthanum_embedded_fullerene_dust")
+    gtr.laser_engraver("gtceu:lanthanum_embedded_fullerene_dust")
         .itemInputs("2x gtceu:lanthanum_fullerene_mix_dust")
+        .notConsumable("gtceu:sapphire_lens")
         .inputFluids("gtceu:nitrogen 10000")
         .itemOutputs("2x gtceu:lanthanum_embedded_fullerene_dust")
         .outputFluids("gtceu:ammonia 10000")
         .EUt(1966080)
         .duration(320)
-        .blastFurnaceTemp(7000)
+        .addDataBool("special", true)
 
     gtr.large_chemical_reactor("gtceu:fullerene_doped_nanotubes")
         .itemInputs("gtceu:fullerene_dust")
@@ -14163,7 +14166,7 @@ ServerEvents.recipes((event) => {
 
     tiers.forEach(i => {
         gtr.assembler("gtceu:" + i[0] + "_neutron_accelerator")
-            .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 0 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
+            .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 0 ? "2x gtceu:lead_rotor" : "2x " + i[2] + ":" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
             .itemOutputs("gtceu:" + i[0] + "_neutron_accelerator")
             .inputFluids("gtceu:polonium 288")
             .EUt(30)
@@ -14572,6 +14575,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 10000", "gtceu:oxygen 5000", "gtceu:light_fuel 10000", "gtceu:heavy_fuel 2000", "gtceu:nitration_mixture 4000")
         .outputFluids("gtceu:cetane_boosted_diesel 18000")
         .EUt(GTValues.VA[GTValues.EV])
+        .circuit(2)
         .duration(400)
         .blastFurnaceTemp(2200)
 
@@ -14580,6 +14584,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 10000", "gtceu:oxygen 5000", "gtceu:bio_diesel 16000", "gtceu:nitration_mixture 4000")
         .outputFluids("gtceu:cetane_boosted_diesel 14000")
         .EUt(GTValues.VA[GTValues.EV])
+        .circuit(3)
         .duration(600)
         .blastFurnaceTemp(2500)
 
@@ -14587,6 +14592,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("44x gtceu:carbon_dust")
         .inputFluids("gtceu:oxygen 12000", "gtceu:nitrogen 8000", "gtceu:naphtha 16000", "gtceu:refinery_gas 2000", "gtceu:toluene 4000", "gtceu:octane 3000")
         .outputFluids("gtceu:high_octane_gasoline 50000")
+        .circuit(4)
         .EUt(GTValues.VA[GTValues.IV])
         .duration(1200)
         .blastFurnaceTemp(4800)
@@ -14596,6 +14602,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 32000", "gtceu:oxygen 14000", "gtceu:nitrogen 12000", "gtceu:chlorine 10000")
         .outputFluids("gtceu:rocket_fuel 36000")
         .EUt(GTValues.VA[GTValues.EV])
+        .circuit(5)
         .duration(1600)
         .blastFurnaceTemp(2600)
 
@@ -14604,6 +14611,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:coal_gas 80000", "gtceu:oxygen 10000")
         .outputFluids("gtceu:rocket_fuel_rp_1 4000")
         .EUt(GTValues.VA[GTValues.EV])
+        .circuit(6)
         .duration(1200)
         .blastFurnaceTemp(3800)
 
@@ -14612,6 +14620,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 12000", "gtceu:oxygen 8000", "gtceu:nitrogen 10000", "gtceu:hydrogen_peroxide 4000")
         .outputFluids("gtceu:dense_hydrazine_fuel_mixture 8000")
         .EUt(GTValues.VA[GTValues.EV])
+        .circuit(7)
         .duration(800)
         .blastFurnaceTemp(3200)
 
@@ -14629,6 +14638,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 30000", "gtceu:nitrogen 18000", "gtceu:oxygen 24000")
         .outputFluids("gtceu:rocket_fuel_h8n4c2o4 12000")
         .EUt(GTValues.VA[GTValues.IV])
+        .circuit(8)
         .duration(2000)
         .blastFurnaceTemp(5000)
 
@@ -14637,6 +14647,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 42000", "gtceu:oxygen 20000", "gtceu:nitrogen 8000", "gtceu:heavy_fuel 1000", "gtceu:light_fuel 4000")
         .outputFluids("ad_astra:cryo_fuel 8000")
         .EUt(GTValues.VA[GTValues.LuV])
+        .circuit(9)
         .duration(6400)
         .blastFurnaceTemp(10000)
 
@@ -16149,7 +16160,7 @@ ServerEvents.recipes((event) => {
 
     gtr.component_assembly_line("gtlcore:max_robot_arm")
         .circuit(4)
-        .itemInputs("192x #gtceu:circuits/uxv", "96x #gtceu:circuits/opv", "192x gtlcore:max_electric_motor", "48x gtlcore:max_electric_piston", "48x #gtceu:circuits/amx", "96x gtceu:cosmicneutronium_hex_cable")
+        .itemInputs("192x #gtceu:circuits/uxv", "96x #gtceu:circuits/opv", "192x gtlcore:max_electric_motor", "48x gtlcore:max_electric_piston", "48x #gtceu:circuits/max", "96x gtceu:cosmicneutronium_hex_cable")
         .inputFluids("gtceu:super_mutated_living_solder 884736", "gtceu:soldering_alloy 1769472", "gtceu:lubricant 3072000", "gtceu:transcendentmetal 152064", "gtceu:infinity 27648")
         .itemOutputs("64x gtlcore:max_robot_arm")
         .EUt(GTValues.VA[GTValues.MAX])
@@ -17291,4 +17302,33 @@ ServerEvents.recipes((event) => {
         .itemOutputs("1x gtceu:sulfur_dust")
         .duration(120)
         .EUt(30)
+
+    gtr.fragment_world_collection("gtceu:make_world_fragments_10")
+        .itemInputs("gtlcore:world_fragments_overworld")
+        .notConsumable("ad_astra_rocketed:tier_6_rocket")
+        .inputFluids("ad_astra:cryo_fuel 16000")
+        .chancedOutput("gtlcore:miracle_crystal", 1, 0)
+        .itemOutputs("gtlcore:world_fragments_pluto")
+        .circuit(32)
+        .duration(200)
+        .EUt(8)
+    gtr.fragment_world_collection("gtceu:make_world_fragments_11")
+        .itemInputs("gtlcore:world_fragments_overworld")
+        .notConsumable("ad_astra_rocketed:tier_6_rocket")
+        .inputFluids("ad_astra:cryo_fuel 16000")
+        .chancedOutput("gtlcore:miracle_crystal", 1, 0)
+        .itemOutputs("gtlcore:world_fragments_enceladus")
+        .circuit(31)
+        .duration(200)
+        .EUt(8)
+    gtr.fragment_world_collection("gtceu:make_world_fragments_12")
+         .itemInputs("gtlcore:world_fragments_overworld")
+         .notConsumable("ad_astra_rocketed:tier_6_rocket")
+         .inputFluids("ad_astra:cryo_fuel 16000")
+         .chancedOutput("gtlcore:miracle_crystal", 1, 0)
+         .itemOutputs("gtlcore:world_fragments_titan")
+         .circuit(30)
+         .duration(200)
+         .EUt(8)
+
 })

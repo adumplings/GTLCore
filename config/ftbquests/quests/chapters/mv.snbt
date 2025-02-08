@@ -29,6 +29,7 @@
 				"66DC60EABAAE0619"
 				"32960AFE43AFF989"
 			]
+			icon_scale: 2.0d
 			id: "242AFA510EC14878"
 			rewards: [{
 				id: "24E01572C2356B37"
@@ -50,6 +51,7 @@
 				"6CB3D4A09CC0FC63"
 				"17E9AB180BA36353"
 			]
+			icon_scale: 2.0d
 			id: "2C75EB0628CB491A"
 			rewards: [{
 				id: "0164BB31168BC82E"
@@ -67,7 +69,7 @@
 			y: 8.0d
 		}
 		{
-			description: ["前往石化与生化章节查看详细内容"]
+			description: ["处理石油或者用硫酸和乙醇反应获得"]
 			id: "6CB3D4A09CC0FC63"
 			rewards: [{
 				id: "45B5000FEE2FE807"
@@ -300,6 +302,7 @@
 		{
 			dependencies: ["541275BC83188F74"]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "402C76093CA517F1"
 			rewards: [{
 				id: "6CEE77032B6230CB"
@@ -343,6 +346,7 @@
 		}
 		{
 			dependencies: ["35687FC065DB2F00"]
+			icon_scale: 2.0d
 			id: "124D7427DC8E501E"
 			rewards: [{
 				id: "1827822D8F7BEBCA"
@@ -524,6 +528,7 @@
 				"55AB003495D2CCE9"
 			]
 			description: ["继续更换更便宜的终极控制电路"]
+			icon_scale: 2.0d
 			id: "66DC60EABAAE0619"
 			rewards: [{
 				id: "244FAF6A2D2B4398"
@@ -540,6 +545,7 @@
 		}
 		{
 			dependencies: ["4AEBF1743DC2C92C"]
+			icon_scale: 2.0d
 			id: "554D9DF1365F857C"
 			rewards: [{
 				id: "520F0A9536AE7438"
@@ -556,6 +562,7 @@
 		}
 		{
 			dependencies: ["124D7427DC8E501E"]
+			icon_scale: 2.0d
 			id: "4AEBF1743DC2C92C"
 			rewards: [{
 				id: "1EE37E574D37B9A1"
@@ -637,6 +644,7 @@
 		}
 		{
 			dependencies: ["3E2F61B1A26AD378"]
+			icon_scale: 2.0d
 			id: "79AE49C5DE7900FF"
 			rewards: [{
 				id: "14D7A9D5021B36AB"
@@ -706,7 +714,12 @@
 		}
 		{
 			dependencies: ["128671E4DC47EF55"]
-			description: ["利用这个东西从虚空流体矿脉中采流体"]
+			description: [
+				"利用这个东西从虚空流体矿脉中采流体"
+				""
+				"探矿仪潜行右键可以查看流体矿脉"
+				"钻机只能安装一个能源仓"
+			]
 			hide_dependency_lines: true
 			id: "4AF1D57BE5C49B3E"
 			rewards: [{
@@ -733,6 +746,7 @@
 				"电压等级需要匹配放入机器等级！！！"
 			]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "2F5CB842110A5DB2"
 			rewards: [{
 				id: "72C938CBB89284AC"
@@ -856,6 +870,7 @@
 				"但如果只放一个4A能源仓，那么机器将只会提升功率而不提升配方等级，可以让通用工厂用MV机器跑出HV的速度，如果你放2个4A，那么机器也会提升配方等级，和普通的相比多了1倍功率，这不会带来超频效果，但是如果机器可以并行，那么将会比普通仓获得更多并行"
 			]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "58723DA3E76316E6"
 			rewards: [{
 				id: "6DA6F56950BF9713"

@@ -58,6 +58,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:bronze_ingot"
 			id: "5D8C36224EAD129C"
+			optional: true
 			rewards: [{
 				id: "4DC28677F9AC9E9A"
 				item: "gtceu:bronze_ingot"
@@ -78,6 +79,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:tin_alloy_ingot"
 			id: "6B108E774863DD83"
+			optional: true
 			rewards: [{
 				id: "2CBC6E86DA9BE01E"
 				item: "gtceu:tin_alloy_ingot"
@@ -99,6 +101,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:steel_ingot"
 			id: "5D6D75D548EC9255"
+			optional: true
 			rewards: [{
 				id: "62F22CD1F901F416"
 				item: "gtceu:steel_dust"
@@ -120,6 +123,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "minecraft:copper_ingot"
 			id: "6530A7F1F1EF9E0E"
+			optional: true
 			rewards: [{
 				id: "0DF96DB36DB9D955"
 				item: "minecraft:copper_ingot"
@@ -140,6 +144,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:tin_ingot"
 			id: "3A495254105F39FE"
+			optional: true
 			rewards: [{
 				id: "5DF9361E1EFE7DE1"
 				item: "gtceu:tin_ingot"
@@ -160,6 +165,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "minecraft:iron_ingot"
 			id: "41A03ABE176583A6"
+			optional: true
 			rewards: [{
 				id: "6BCAF7F30F621F31"
 				item: "minecraft:iron_ingot"
@@ -180,6 +186,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:sticky_resin"
 			id: "480654050D2AA365"
+			optional: true
 			rewards: [{
 				id: "580D3A12A204DE87"
 				item: "gtceu:sticky_resin"
@@ -200,6 +207,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "gtceu:lead_ingot"
 			id: "62262C7C04B2D79A"
+			optional: true
 			rewards: [{
 				id: "3E89D22A6BE68246"
 				item: "gtceu:lead_ingot"
@@ -220,6 +228,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "gtceu:nickel_ingot"
 			id: "6105D12CA14D5AF1"
+			optional: true
 			rewards: [{
 				id: "660DBC342535BB7C"
 				item: "gtceu:nickel_ingot"
@@ -240,6 +249,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "gtceu:silver_ingot"
 			id: "4E524697DB6A4E38"
+			optional: true
 			rewards: [{
 				id: "5F82508C865D553B"
 				item: "gtceu:silver_ingot"
@@ -261,6 +271,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "minecraft:gold_ingot"
 			id: "7EDB453FBC4B7957"
+			optional: true
 			rewards: [{
 				id: "6701A90D82E532A8"
 				item: "minecraft:gold_ingot"
@@ -282,6 +293,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "gtceu:aluminium_ingot"
 			id: "28B1628F5D38BBE9"
+			optional: true
 			rewards: [{
 				id: "7FC91ADFC7DF86CD"
 				item: "gtceu:aluminium_dust"
@@ -303,6 +315,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "minecraft:redstone"
 			id: "14FE20F424D376CD"
+			optional: true
 			rewards: [{
 				count: 4
 				id: "573C44E8F54B65BE"
@@ -324,6 +337,7 @@
 			dependencies: ["6967496308DD29AE"]
 			icon: "gtceu:rubber_ingot"
 			id: "4FC06B3C5E4C3749"
+			optional: true
 			rewards: [{
 				id: "2F6EF7DAF80887EA"
 				item: "gtceu:rubber_ingot"
@@ -377,6 +391,7 @@
 				}
 			}
 			id: "15A4420D900FEDE6"
+			optional: true
 			rewards: [{
 				id: "7E56F698AF18B8AD"
 				item: {
@@ -417,6 +432,7 @@
 			]
 			icon: "avaritia:infinity_sword"
 			id: "59E9131BD015B4F5"
+			optional: true
 			rewards: [{
 				id: "4F21C8505D7A2EBC"
 				item: "avaritia:infinity_sword"
@@ -443,9 +459,10 @@
 		{
 			can_repeat: true
 			dependencies: ["369BA1002418F097"]
-			description: ["铸造方法已经失传"]
+			description: ["铸造方法已经失传，远古中蕴含着踪迹"]
 			icon: "gtceu:damascus_steel_ingot"
 			id: "0E0889E2DEB646B6"
+			optional: true
 			rewards: [{
 				id: "0A188BADCDB23487"
 				item: "gtceu:damascus_steel_dust"
@@ -484,6 +501,7 @@
 				}
 			}
 			id: "204D5882D7F5CF64"
+			optional: true
 			rewards: [
 				{
 					id: "305DCBDAB0E551AA"
@@ -568,6 +586,7 @@
 				}
 			}
 			id: "3A0E2C1B07649B81"
+			optional: true
 			rewards: [{
 				id: "3B9623C406861996"
 				item: {
@@ -618,6 +637,7 @@
 			dependencies: ["1994BAD293E85984"]
 			icon: "gtceu:silver_octal_cable"
 			id: "03F8B997EFEB4636"
+			optional: true
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "2BD7E35B07717A83"
@@ -639,6 +659,7 @@
 			dependencies: ["1994BAD293E85984"]
 			icon: "gtceu:exquisite_ruby_gem"
 			id: "7CD3E38C1FC6D0DD"
+			optional: true
 			rewards: [{
 				count: 4
 				id: "7A9FDC40E6FBF2DD"
@@ -660,6 +681,7 @@
 			dependencies: ["1994BAD293E85984"]
 			icon: "gtceu:gallium_dust"
 			id: "6D8265D945F1A4FE"
+			optional: true
 			rewards: [{
 				id: "64DFB1A234040D63"
 				item: "gtceu:gallium_dust"
@@ -680,6 +702,7 @@
 			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtceu:platinum_octal_cable"
 			id: "322DE662115CB052"
+			optional: true
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "1CE47CF23D506908"
@@ -701,6 +724,7 @@
 			dependencies: ["1994BAD293E85984"]
 			icon: "travelanchors:travel_staff"
 			id: "0A5739F8E482B47E"
+			optional: true
 			rewards: [{
 				id: "0CCB7C8F1482C14A"
 				item: {
@@ -738,6 +762,7 @@
 			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtceu:lv_super_tank"
 			id: "1C4B5EDEA37AF553"
+			optional: true
 			rewards: [{
 				id: "12671ABB3E06CBB1"
 				item: "gtceu:lv_super_tank"
@@ -758,6 +783,7 @@
 			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtceu:lv_super_chest"
 			id: "12E723ABD388B0E3"
+			optional: true
 			rewards: [{
 				id: "129CCFB180D0461B"
 				item: "gtceu:lv_super_chest"
@@ -790,6 +816,7 @@
 			hide_dependency_lines: false
 			icon: "gtceu:steel_fluid_cell"
 			id: "15567706C963F777"
+			optional: true
 			rewards: [{
 				id: "090167413FB053EB"
 				item: "gtceu:steel_fluid_cell"
@@ -810,6 +837,7 @@
 			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtceu:aluminium_fluid_cell"
 			id: "5A3A66918A576FC9"
+			optional: true
 			rewards: [{
 				id: "48FE5C4048BEC765"
 				item: "gtceu:aluminium_fluid_cell"
@@ -830,6 +858,7 @@
 			dependencies: ["0F5FC80A063D12FE"]
 			icon: "gtceu:mv_super_tank"
 			id: "15C89656703F9E75"
+			optional: true
 			rewards: [{
 				id: "7C1206401F30BF82"
 				item: "gtceu:mv_super_tank"
@@ -850,6 +879,7 @@
 			dependencies: ["0F5FC80A063D12FE"]
 			icon: "gtceu:mv_super_chest"
 			id: "6B5066DF5C58DBF7"
+			optional: true
 			rewards: [{
 				id: "375A63BC6271866B"
 				item: "gtceu:mv_super_chest"
@@ -870,6 +900,7 @@
 			dependencies: ["0F5FC80A063D12FE"]
 			icon: "gtceu:stainless_steel_fluid_cell"
 			id: "30F2BC5FCEB33446"
+			optional: true
 			rewards: [{
 				id: "03D0D6BF9403B5B1"
 				item: "gtceu:stainless_steel_fluid_cell"
@@ -900,6 +931,7 @@
 				}
 			}
 			id: "78DAFF8A81A14F39"
+			optional: true
 			rewards: [{
 				id: "71B78ED825255269"
 				item: {
@@ -949,6 +981,7 @@
 				}
 			}
 			id: "531F00E7AB0E7B43"
+			optional: true
 			rewards: [{
 				id: "262AF1D5E6E47558"
 				item: {
@@ -1016,6 +1049,7 @@
 				}
 			}
 			id: "57097B0BBA1CF850"
+			optional: true
 			rewards: [{
 				id: "29B2BA20507FECCF"
 				item: {
@@ -1095,6 +1129,7 @@
 			dependencies: ["328D140CCF4FAEC6"]
 			icon: "gtceu:steam_machine_casing"
 			id: "3E6BC2F76ED6F531"
+			optional: true
 			rewards: [{
 				count: 10
 				id: "456F4E89948DB4FC"
@@ -1136,6 +1171,7 @@
 			dependencies: ["4E80FF3BE1903C6F"]
 			icon: "gtceu:iv_quantum_tank"
 			id: "108474D18FF26868"
+			optional: true
 			rewards: [{
 				id: "386CBAFFD948BA37"
 				item: "gtceu:iv_quantum_tank"
@@ -1152,9 +1188,11 @@
 			y: 2.0d
 		}
 		{
+			can_repeat: true
 			dependencies: ["4E80FF3BE1903C6F"]
 			icon: "gtceu:iv_quantum_chest"
 			id: "0AA4047019DAA90F"
+			optional: true
 			rewards: [{
 				id: "03CED3F2EAD7BC6F"
 				item: "gtceu:iv_quantum_chest"
@@ -1174,6 +1212,7 @@
 			can_repeat: true
 			dependencies: ["231670C48BBDDB3E"]
 			id: "2D03768503C09D2D"
+			optional: true
 			rewards: [{
 				id: "47E27CC67FB028DC"
 				item: "gtceu:gold_credit"
@@ -1185,7 +1224,7 @@
 				item: "gtceu:ancient_gold_coin"
 				type: "item"
 			}]
-			title: "黑心老板"
+			title: "奸商"
 			x: 4.5d
 			y: -1.0d
 		}
@@ -1193,6 +1232,7 @@
 			can_repeat: true
 			dependencies: ["0F5FC80A063D12FE"]
 			id: "1F3806972B21488E"
+			optional: true
 			rewards: [{
 				id: "54D86640EAE02D8E"
 				item: "gtceu:platinum_credit"
@@ -1213,6 +1253,7 @@
 			can_repeat: true
 			dependencies: ["4E80FF3BE1903C6F"]
 			id: "5D20FDB89B25FB89"
+			optional: true
 			rewards: [{
 				id: "23FC3BE7E1A76D12"
 				item: "gtceu:osmium_credit"
@@ -1225,7 +1266,7 @@
 				item: { Count: 100, id: "gtceu:ancient_gold_coin" }
 				type: "item"
 			}]
-			title: "黑心老板"
+			title: "资本家"
 			x: 4.5d
 			y: 2.0d
 		}
@@ -1234,6 +1275,7 @@
 			dependencies: ["4E80FF3BE1903C6F"]
 			icon: "ae2:cell_component_256k"
 			id: "30787B18066763DB"
+			optional: true
 			rewards: [{
 				count: 2
 				id: "0641B4398B707B90"
@@ -1256,6 +1298,7 @@
 			hide_text_until_complete: false
 			icon: "ae2:fluix_glass_cable"
 			id: "74D4AA7CA6A67F59"
+			optional: true
 			rewards: [{
 				count: 256
 				id: "004D5D6FF16CC76C"
@@ -1275,6 +1318,7 @@
 		{
 			can_repeat: true
 			dependencies: ["6967496308DD29AE"]
+			icon: "minecraft:yellow_dye"
 			id: "7B72A96FC0A31033"
 			optional: true
 			rewards: [{
@@ -1284,6 +1328,7 @@
 				type: "choice"
 			}]
 			tasks: [{
+				consume_items: true
 				id: "52079BD0F841DEA6"
 				item: "gtceu:silver_credit"
 				type: "item"
@@ -1291,6 +1336,40 @@
 			title: "多彩世界"
 			x: 4.5d
 			y: -4.0d
+		}
+		{
+			dependencies: ["0F4AFDE98CEA87B1"]
+			hide: true
+			id: "7F3D9F19428262A4"
+			optional: true
+			tasks: [{
+				id: "01ED6237660732C1"
+				title: "空岛"
+				type: "checkmark"
+			}]
+			x: -7.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7F3D9F19428262A4"]
+			hide: false
+			icon: "gtceu:ulv_fragment_world_collection_machine"
+			id: "16A27768544CDACB"
+			optional: true
+			rewards: [{
+				id: "7BB93EB9D7CE4DC6"
+				item: "gtceu:ulv_fragment_world_collection_machine"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "30DBCFC58F070BB5"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			title: "碎片世界采集器"
+			x: -6.0d
+			y: 3.5d
 		}
 	]
 	title: "小市场"
