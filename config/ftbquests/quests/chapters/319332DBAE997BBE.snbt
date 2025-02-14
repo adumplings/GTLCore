@@ -534,7 +534,10 @@
 				"7B412E455E2C321B"
 				"2AA63D77B0E86D2E"
 			]
-			description: ["其产物处理线路复杂请仔细查看"]
+			description: [
+				"顶层输入，底层输出"
+				"其产物处理线路复杂请仔细查看"
+			]
 			hide_dependent_lines: true
 			icon_scale: 2.0d
 			id: "766D051A40AB5324"
@@ -587,6 +590,7 @@
 				"效率很高，你会喜欢的"
 			]
 			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "5B73961795BE42EE"
 			tasks: [{
 				id: "4532FD760D4A8258"
@@ -599,6 +603,7 @@
 		{
 			dependencies: ["5B73961795BE42EE"]
 			description: ["非常慢，但是这是必须的"]
+			icon_scale: 2.0d
 			id: "2588A0EF7F27DE5B"
 			tasks: [{
 				id: "6372AD4866BBD6B6"
@@ -610,6 +615,7 @@
 		}
 		{
 			dependencies: ["2588A0EF7F27DE5B"]
+			icon_scale: 2.0d
 			id: "147A71CE5EEBC836"
 			tasks: [{
 				id: "09A3EC272A7B5FF8"

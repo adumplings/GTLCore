@@ -433,6 +433,7 @@
 		}
 		{
 			dependencies: ["5B65662B72C369E7"]
+			description: [""]
 			icon_scale: 2.0d
 			id: "14D60DF010FF0396"
 			rewards: [
@@ -936,7 +937,10 @@
 		}
 		{
 			dependencies: ["17365ABC639496E6"]
-			description: ["你也可以用凋零骷髅头和灵魂沙组装"]
+			description: [
+				"你也可以用凋零骷髅头和灵魂沙组装"
+				"不过主要还是得靠聚爆"
+			]
 			icon_scale: 2.0d
 			id: "631707E722744406"
 			tasks: [{
@@ -969,7 +973,12 @@
 		}
 		{
 			dependencies: ["14D60DF010FF0396"]
-			description: ["去地狱干什么呢，挖点灵魂沙远古残骸"]
+			description: [
+				"终于可以去下界了"
+				"使用远古反应核，相邻放金块角落放绿宝石块"
+				""
+				"去地狱干什么呢，挖点灵魂沙远古残骸"
+			]
 			id: "6C458862EEAB2F03"
 			tasks: [{
 				id: "0D5CEA70737F2D5B"

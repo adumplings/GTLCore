@@ -2068,8 +2068,13 @@
 			y: 15.0d
 		}
 		{
-			dependencies: ["7570243EDE6F35B1"]
+			dependencies: [
+				"7570243EDE6F35B1"
+				"049C0B2BA5525962"
+			]
+			dependency_requirement: "one_completed"
 			id: "5E03D3F795BD0F55"
+			min_required_dependencies: 1
 			subtitle: "用来炖成UXV的基础材料之一"
 			tasks: [{
 				id: "5107DC687C7A012F"
@@ -3410,8 +3415,8 @@
 				item: "gtceu:raw_trinium_compound"
 				type: "item"
 			}]
-			x: 21.5d
-			y: 26.5d
+			x: 27.5d
+			y: 24.5d
 		}
 		{
 			dependencies: ["09EBEB8F3415BB6E"]
@@ -3723,6 +3728,29 @@
 			}]
 			x: 51.0d
 			y: 27.0d
+		}
+		{
+			dependencies: ["37C5E7628A4B826C"]
+			hide_dependency_lines: true
+			id: "2AA1609DA42EA84F"
+			tasks: [{
+				id: "0C75C7BABA17EE50"
+				item: "gtceu:uranium_sulfate_waste_solution_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 24.5d
+		}
+		{
+			dependencies: ["2AA1609DA42EA84F"]
+			id: "65BA1075B4BA1C0A"
+			tasks: [{
+				id: "7BC139E963716816"
+				item: "gtceu:radium_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 24.5d
 		}
 	]
 	title: "资源获取"

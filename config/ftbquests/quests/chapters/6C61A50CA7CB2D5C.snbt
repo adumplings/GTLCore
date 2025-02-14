@@ -2114,8 +2114,10 @@
 			y: -2.0d
 		}
 		{
+			can_repeat: true
 			dependencies: ["5E3EDA6C94CEC3C4"]
 			id: "1308E1F15E72F288"
+			optional: true
 			rewards: [{
 				command: "/execute in minecraft:the_end run tp 0 200 0"
 				elevate_perms: true

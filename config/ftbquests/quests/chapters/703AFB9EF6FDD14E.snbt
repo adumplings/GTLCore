@@ -20,6 +20,12 @@
 			x: 7.5d
 			y: 4.0d
 		}
+		{
+			id: "4A18F19FB88243D8"
+			linked_quest: "51A6B6CDC90D7E76"
+			x: 3.0d
+			y: 0.0d
+		}
 	]
 	quests: [
 		{
@@ -101,7 +107,7 @@
 		}
 		{
 			dependencies: ["1B664763E9558755"]
-			description: ["不可超频"]
+			description: ["空岛特供机器    不可超频"]
 			hide: false
 			id: "72FB1A140FACFA76"
 			optional: true

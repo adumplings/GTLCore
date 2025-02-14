@@ -107,6 +107,8 @@
 			dependencies: [
 				"7CB85061F0822830"
 				"553B2D61416792DC"
+				"367D3E683D1387D0"
+				"1F2D08F4FEF1CEDC"
 			]
 			id: "51B9A72C19F84F0E"
 			shape: "rsquare"
@@ -1115,7 +1117,11 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["51B9A72C19F84F0E"]
+			dependencies: [
+				"51B9A72C19F84F0E"
+				"516AA655EF6CBBF0"
+			]
+			dependency_requirement: "one_started"
 			description: [
 				"可以理解为一个不消耗的物品，但不需要真正的物品，只需要在机器里设置。"
 				"如果从外部输入编程电路物品，则会覆盖当前的电路设置，实现编程电路的自由变换。"
@@ -1130,6 +1136,7 @@
 			}
 			icon_scale: 2.0d
 			id: "51A6B6CDC90D7E76"
+			min_required_dependencies: 1
 			rewards: [{
 				id: "7AFF24BD5E9724BE"
 				item: "gtceu:cupronickel_credit"
