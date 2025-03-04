@@ -346,7 +346,49 @@
 				type: "item"
 			}]
 			title: "终于，结束了"
-			x: 16.5d
+			x: 16.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["45F4EB0162D52A7D"]
+			id: "2A4105167269BBC1"
+			invisible: true
+			subtitle: "给鱼大上点心"
+			tasks: [{
+				id: "15126ED74C7361B4"
+				item: "gtceu:creative_chest"
+				type: "item"
+			}]
+			title: "真的，结束了"
+			x: 20.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["503A37C31E60684B"]
+			id: "29304625D5F2E72D"
+			invisible: true
+			subtitle: "给鱼大敬茶"
+			tasks: [{
+				id: "0128C8F1B476604F"
+				item: "gtceu:creative_tank"
+				type: "item"
+			}]
+			title: "还能继续"
+			x: 17.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["29304625D5F2E72D"]
+			id: "45F4EB0162D52A7D"
+			invisible: true
+			subtitle: "彩色的茶，彩色的心"
+			tasks: [{
+				id: "215D799868757B3C"
+				item: "kubejs:heartofthesmogus"
+				type: "item"
+			}]
+			title: "差不多，结束了"
+			x: 19.0d
 			y: 2.5d
 		}
 	]
