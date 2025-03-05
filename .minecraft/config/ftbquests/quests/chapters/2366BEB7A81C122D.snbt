@@ -658,6 +658,26 @@
 			x: 12.0d
 			y: 2.0d
 		}
+		{
+			dependencies: ["7204F1B6BCC74F1C"]
+			hide_dependency_lines: true
+			id: "2DA05E5BAEAFB88E"
+			tasks: [
+				{
+					id: "105A19D975EC4EAA"
+					item: "gtlcore:item_infinity_cell"
+					type: "item"
+				}
+				{
+					id: "78D71EA51CA14E68"
+					item: "gtlcore:fluid_infinity_cell"
+					type: "item"
+				}
+			]
+			title: "无限磁盘"
+			x: 12.0d
+			y: 10.0d
+		}
 	]
 	subtitle: ["Tier8-UV"]
 	title: "极限压"

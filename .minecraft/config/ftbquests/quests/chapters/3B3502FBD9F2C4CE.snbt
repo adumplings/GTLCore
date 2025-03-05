@@ -261,7 +261,7 @@
 			}]
 			title: "新的塑料"
 			x: 8.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -801,6 +801,17 @@
 				}
 			]
 			title: "新的橡胶与树脂"
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			id: "32ECBFC902A439D4"
+			subtitle: "批量修改样板"
+			tasks: [{
+				id: "080EC529FC5008E4"
+				item: "gtlcore:pattern_modifier"
+				type: "item"
+			}]
 			x: 8.0d
 			y: 0.0d
 		}
