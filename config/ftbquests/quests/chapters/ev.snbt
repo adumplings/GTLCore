@@ -11,7 +11,7 @@
 			id: "263559F3CAFF312A"
 			linked_quest: "3CB16B36A5AA2A10"
 			x: 6.0d
-			y: 0.0d
+			y: 1.5d
 		}
 		{
 			id: "273B5005EE3685F3"
@@ -1048,6 +1048,18 @@
 				}
 			]
 			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29BB35C725BE7D96"]
+			id: "6D638925CF462586"
+			subtitle: "时间直接减半"
+			tasks: [{
+				id: "3DC00959AA0CB9DD"
+				item: "kubejs:time_twister_wireless"
+				type: "item"
+			}]
+			x: 6.0d
 			y: 0.0d
 		}
 	]
