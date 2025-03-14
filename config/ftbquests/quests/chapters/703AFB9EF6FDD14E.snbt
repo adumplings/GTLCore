@@ -297,6 +297,75 @@
 			x: 7.5d
 			y: 3.0d
 		}
+		{
+			dependencies: ["0F4AFDE98CEA87B1"]
+			hide_dependency_lines: true
+			id: "66C8E56877EB2C27"
+			rewards: [
+				{
+					id: "1A114E870FCE0EA5"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+				{
+					id: "3EC45E3DE133EC2D"
+					item: "minecraft:spruce_sapling"
+					type: "item"
+				}
+				{
+					id: "57D6E06AE3BB3F3B"
+					item: "minecraft:birch_sapling"
+					type: "item"
+				}
+				{
+					id: "7F92C4560AD4D06A"
+					item: "minecraft:jungle_sapling"
+					type: "item"
+				}
+				{
+					id: "2730EB7D64BEDAA2"
+					item: "minecraft:acacia_sapling"
+					type: "item"
+				}
+				{
+					id: "28D0AEAB246DB69D"
+					item: "minecraft:dark_oak_sapling"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "57B247D17151F041"
+				title: "树苗大礼包"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F4AFDE98CEA87B1"]
+			description: [
+				"如果你想开一个空岛版的服务器"
+				"你需要修改"
+				""
+				"config/gtlcore.yaml里面"
+				"enableSkyBlokeMode改成true"
+				""
+				"server.properties里面的"
+				"level-type改成skyblockbuilder\\:skyblock"
+				""
+				"而且我建议你查看skyblock builder的wiki"
+				"wiki.chaotictrials.de/docs/wiki/skyblock-builder/"
+			]
+			hide_dependency_lines: true
+			id: "312C7E81F1B9880D"
+			tasks: [{
+				id: "05C535F1D6443E3B"
+				title: "有关内容"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
 	]
 	title: "空岛模式"
 }
