@@ -98,7 +98,7 @@
 			]
 			description: [
 				"你可以开始炼钢了"
-				"推荐&5焦煤+锻铁&r的配方"
+				"推荐尽快做&5超维度等泥土锻炉&r"
 			]
 			icon_scale: 2.0d
 			id: "5CE50DDC960340D8"
@@ -823,11 +823,18 @@
 			]
 			icon_scale: 2.0d
 			id: "328D5CF265FCCCA3"
-			rewards: [{
-				id: "02EE5681EA132E6A"
-				item: "avaritia:star_fuel"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "02EE5681EA132E6A"
+					item: "avaritia:star_fuel"
+					type: "item"
+				}
+				{
+					id: "38F3639A0D9D9BBB"
+					item: "kubejs:diamond_compressed_block"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			tasks: [{
 				id: "31B3E7B10BBA0EDD"

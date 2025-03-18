@@ -290,6 +290,7 @@
 		{
 			dependencies: ["75CE99CD1614FB64"]
 			id: "31B4B834D5DD87DB"
+			subtitle: "毕业了"
 			tasks: [{
 				id: "6D68D65E443AE5FE"
 				item: "gtceu:creative_data_access_hatch"
@@ -304,6 +305,7 @@
 				"2D1F2793A396B322"
 			]
 			id: "5F145D9019C4BC48"
+			subtitle: "毕业了"
 			tasks: [{
 				id: "02CCDE9B8302A71A"
 				item: "gtmthings:creative_laser_hatch"
@@ -320,6 +322,7 @@
 			description: ["你看着它好像看到了好多个银河年前泛银河格雷科技销售部货架上的那个大胡子玩偶"]
 			icon_scale: 2.0d
 			id: "516498830339A0A9"
+			subtitle: "附加题"
 			tasks: [{
 				id: "74404EE9AEC393D4"
 				item: "expatternprovider:fishbig"
@@ -331,7 +334,11 @@
 		}
 		{
 			dependencies: ["516498830339A0A9"]
-			description: ["恭喜你完成了这个游戏，感谢你的游玩。"]
+			description: [
+				"恭喜你完成了这个游戏，感谢你的游玩。"
+				""
+				"据说真正到达这里的不到十个。"
+			]
 			hide: true
 			icon: "gtlcore:ultimate_tea"
 			id: "503A37C31E60684B"
@@ -350,7 +357,6 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["45F4EB0162D52A7D"]
 			id: "2A4105167269BBC1"
 			invisible: true
 			subtitle: "给鱼大上点心"
@@ -364,7 +370,6 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["503A37C31E60684B"]
 			id: "29304625D5F2E72D"
 			invisible: true
 			subtitle: "给鱼大敬茶"
@@ -378,7 +383,6 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["29304625D5F2E72D"]
 			id: "45F4EB0162D52A7D"
 			invisible: true
 			subtitle: "彩色的茶，彩色的心"

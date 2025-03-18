@@ -20,8 +20,8 @@
 	quest_links: [{
 		id: "7476D5287FB73239"
 		linked_quest: "335ED39019FC62E7"
-		x: 0.0d
-		y: 3.5d
+		x: 2.0d
+		y: 2.0d
 	}]
 	quests: [
 		{
@@ -2091,8 +2091,8 @@
 				title: "去远古世界"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			can_repeat: true
@@ -2177,6 +2177,24 @@
 			}]
 			x: 10.0d
 			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "4BCBB3270D825F0E"
+			optional: true
+			rewards: [{
+				command: "/execute in minecraft:overworld run tp 0 200 0"
+				elevate_perms: true
+				id: "5C977ABA2F4861A9"
+				type: "command"
+			}]
+			tasks: [{
+				id: "6261241DFF0B95E0"
+				title: "主世界"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	title: "探索世界"
