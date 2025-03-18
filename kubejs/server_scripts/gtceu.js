@@ -68,6 +68,16 @@ ServerEvents.recipes((event) => {
         C: "gtmthings:max_4194304a_wireless_laser_target_hatch"
     })
 
+     event.shaped("gtmthings:creative_energy_hatch", [
+            "ABA",
+            "BCB",
+            "ABA"
+        ], {
+            A: "minecraft:chain_command_block",
+            B: "kubejs:chaotic_energy_core",
+            C: "gtmthings:max_64a_wireless_energy_input_hatch"
+        })
+
     event.shaped("gtceu:large_steam_input_hatch", [
         "ACA",
         "BDB",
