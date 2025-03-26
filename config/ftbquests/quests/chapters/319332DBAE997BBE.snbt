@@ -602,7 +602,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5B73961795BE42EE"]
@@ -615,7 +615,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2588A0EF7F27DE5B"]
@@ -627,7 +627,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["4172820CE8E15F90"]
@@ -705,6 +705,21 @@
 			}]
 			x: 8.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["67784DEB22D18308"]
+			description: [
+				"一手末影之眼，一手末地数据"
+				"以开启末地门"
+			]
+			id: "0278A150804C3710"
+			tasks: [{
+				id: "14CD143A66B6DF60"
+				title: "末地"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 10.0d
 		}
 	]
 	subtitle: ["Tier6-LuV"]

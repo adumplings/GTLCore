@@ -59,8 +59,15 @@
 			id: "4BFC342697BDE75A"
 			rewards: [{
 				count: 64
-				id: "64E61CF74C2AD48F"
-				item: "avaritia:compressed_chest"
+				id: "5EB3FB5E5FAF9235"
+				item: {
+					Count: 1
+					id: "sophisticatedstorage:netherite_shulker_box"
+					tag: {
+						accentColor: 16383998
+						mainColor: 16383998
+					}
+				}
 				type: "item"
 			}]
 			tasks: [{
