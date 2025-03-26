@@ -1404,6 +1404,18 @@
 			x: 7.5d
 			y: -4.0d
 		}
+		{
+			dependencies: ["4AB25C15F0B05AA0"]
+			id: "1D93602C5835593F"
+			size: 1.0d
+			tasks: [{
+				id: "7AB796D165A6C084"
+				item: "gtlcore:structure_detect"
+				type: "item"
+			}]
+			x: 0.8d
+			y: 2.0d
+		}
 	]
 	title: "由此开始"
 }
