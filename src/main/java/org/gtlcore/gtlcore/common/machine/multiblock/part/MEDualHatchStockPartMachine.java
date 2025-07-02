@@ -186,18 +186,15 @@ public class MEDualHatchStockPartMachine extends MEBusPartMachine implements IDa
         ExportOnlyAEFluidSlot[] aeFluid = aeFluidHandler.getInventory();
         ExportOnlyAESlot slot;
         for (int i = 0; i < aeItem.length; i++) {
-            boolean isFluid = false;
             slot = aeItem[i];
             var config = slot.getConfig();
             if (config == null) {
                 slot = aeFluid[i];
-                isFluid = true;
                 config = slot.getConfig();
             }
             if (config != null) {
                 var key = config.what();
-                long extracted = networkInv.extract(key, isFluid ? Long.MAX_VALUE : Integer.MAX_VALUE,
-                        Actionable.SIMULATE, actionSource);
+                long extracted = networkInv.extract(key, Long.MAX_VALUE, Actionable.SIMULATE, actionSource);
                 if (extracted > 0) {
                     slot.setStock(new GenericStack(key, extracted));
                     continue;

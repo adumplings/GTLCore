@@ -22,7 +22,7 @@ public class HugeBusPartMachineMixin extends TieredIOPartMachine {
     @Inject(method = "setDistinct", at = @At("RETURN"), remap = false)
     public void setDistinct(boolean isDistinct, CallbackInfo ci) {
         for (var controller : this.getControllers()) {
-            if (controller instanceof IDistinctMachine iDistinctMachine) {
+            if (controller instanceof IDistinctMachine iDistinctMachine && !iDistinctMachine.isDistinct()) {
                 iDistinctMachine.upDate();
             }
         }

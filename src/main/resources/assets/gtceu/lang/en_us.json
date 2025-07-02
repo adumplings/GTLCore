@@ -1647,5 +1647,16 @@
     "tagprefix.plutostone": "冥王星%s矿石",
     "tagprefix.titanstone": "土卫六%s矿石",
     "tagprefix.venus_stone": "金星石%s矿石",
-    "gtceu.recipe.eu_to_starts": "启动耗能：%sMEU(MK%s)"
+    "gtceu.recipe.eu_to_starts": "启动耗能：%sMEU(MK%s)",
+    "gtceu.multiblock.universal.distinct.all":"完全隔离：",
+    "gtceu.top.recipe_input": "配方输入：",
+    "gtceu.machine.lockrecipe.line.0": "%s x §e%s§r ",
+    "gtceu.machine.lockrecipe.line.1": "%s x §e%s§r(出产概率：%s%%) ",
+    "gtceu.machine.lockrecipe.line.2": "%s x §e%s§r(§c不消耗§r) ",
+    "gui.gtlcore.recipe_lock.recipe": "已锁定配方",
+    "gui.gtlcore.recipe_lock.no_recipe": "未锁定配方",
+    "gtceu.recipe.fail.find": "未找到配方",
+    "gtceu.recipe.fail.Output": "输出空间不足",
+    "gtceu.recipe.fail.voltagetier": "电压等级未达到要求",
+    "gtceu.machine.structure_check": "更新结构检查"
 }

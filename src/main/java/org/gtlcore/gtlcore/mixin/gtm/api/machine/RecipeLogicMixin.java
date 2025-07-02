@@ -1,5 +1,6 @@
 package org.gtlcore.gtlcore.mixin.gtm.api.machine;
 
+import org.gtlcore.gtlcore.api.machine.trait.ILockRecipe;
 import org.gtlcore.gtlcore.api.recipe.RecipeRunnerHelper;
 
 import com.gregtechceu.gtceu.api.capability.recipe.IO;
@@ -10,14 +11,26 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.api.recipe.logic.OCParams;
 import com.gregtechceu.gtceu.api.recipe.logic.OCResult;
 
+import com.lowdragmc.lowdraglib.syncdata.annotation.Persisted;
+
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import lombok.Getter;
+import lombok.Setter;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.*;
 
 import java.util.*;
 
 @Mixin(RecipeLogic.class)
-public abstract class RecipeLogicMixin {
+public abstract class RecipeLogicMixin implements ILockRecipe {
+
+    @Persisted
+    @Getter
+    private boolean isLock = false;
+    @Persisted
+    @Getter
+    @Setter
+    private GTRecipe lockRecipe;
 
     @Mutable
     @Final
@@ -64,9 +77,18 @@ public abstract class RecipeLogicMixin {
     @Shadow(remap = false)
     public abstract void setupRecipe(GTRecipe recipe);
 
+    @Shadow(remap = false)
+    public abstract void updateTickSubscription();
+
     public RecipeLogicMixin(IRecipeLogicMachine machine, Map<RecipeCapability<?>, Object2IntMap<?>> chanceCaches) {
         this.machine = machine;
         this.chanceCaches = chanceCaches;
+    }
+
+    public void setLock(boolean look) {
+        isLock = look;
+        lockRecipe = null;
+        updateTickSubscription();
     }
 
     /**
@@ -93,8 +115,16 @@ public abstract class RecipeLogicMixin {
             this.setupRecipe(recipe);
         } else {
             this.lastRecipe = null;
-            this.lastOriginRecipe = null;
-            this.handleSearchingRecipes(this.searchRecipe());
+            if (this.isLock && lockRecipe != null) {
+                this.lastOriginRecipe = lockRecipe;
+                GTRecipe modified = machine.fullModifyRecipe(lastOriginRecipe.copy(), this.ocParams, this.ocResult);
+                if (modified != null && this.gtlcore$checkLastRecipe(modified)) {
+                    setupRecipe(modified);
+                }
+            } else {
+                this.lastOriginRecipe = null;
+                this.handleSearchingRecipes(this.searchRecipe());
+            }
         }
         this.recipeDirty = false;
     }
@@ -105,8 +135,7 @@ public abstract class RecipeLogicMixin {
      */
     @Overwrite(remap = false)
     public boolean checkMatchedRecipeAvailable(GTRecipe match) {
-        GTRecipe matchCopy = match.copy();
-        GTRecipe modified = this.machine.fullModifyRecipe(matchCopy, this.ocParams, this.ocResult);
+        GTRecipe modified = this.machine.fullModifyRecipe(match.copy(), this.ocParams, this.ocResult);
         if (modified != null) {
             if (gtlcore$checkLastRecipe(modified)) {
                 this.setupRecipe(modified);
@@ -114,6 +143,7 @@ public abstract class RecipeLogicMixin {
             if (this.lastRecipe != null && this.getStatus() == RecipeLogic.Status.WORKING) {
                 this.lastOriginRecipe = match;
                 this.lastFailedMatches = null;
+                if (this.isLock) this.lockRecipe = match;
                 return true;
             }
         }

@@ -2,9 +2,11 @@ package org.gtlcore.gtlcore.integration.ae2.storage;
 
 import org.gtlcore.gtlcore.GTLCore;
 import org.gtlcore.gtlcore.integration.ae2.InfinityCell;
+import org.gtlcore.gtlcore.utils.NumberUtils;
 import org.gtlcore.gtlcore.utils.StorageManager;
 
 import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
@@ -18,11 +20,10 @@ import appeng.api.storage.cells.CellState;
 import appeng.api.storage.cells.ISaveProvider;
 import appeng.api.storage.cells.StorageCell;
 import appeng.core.AELog;
-import it.unimi.dsi.fastutil.longs.LongArrayList;
-import it.unimi.dsi.fastutil.objects.Object2LongMap;
-import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import lombok.Getter;
 
+import java.math.BigInteger;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -31,8 +32,8 @@ public class InfinityCellInventory implements StorageCell {
     private final ISaveProvider container;
     private final AEKeyType keyType;
     @Getter
-    private long storedItemCount;
-    private Object2LongMap<AEKey> storedAmounts;
+    private double storedItemCount;
+    private Object2ObjectOpenHashMap<AEKey, BigInteger> storedMap;
     private final ItemStack stack;
     private boolean isPersisted = true;
 
@@ -40,7 +41,7 @@ public class InfinityCellInventory implements StorageCell {
         this.stack = stack;
         this.container = saveProvider;
         this.keyType = keyType;
-        this.storedAmounts = null;
+        this.storedMap = null;
         initData();
     }
 
@@ -53,7 +54,7 @@ public class InfinityCellInventory implements StorageCell {
 
     private void initData() {
         if (hasDiskUUID()) {
-            this.storedItemCount = getDiskStorage().itemCount;
+            this.storedItemCount = getDiskStorage().totalAmount;
         } else {
             this.storedItemCount = 0;
             getCellItems();
@@ -93,30 +94,27 @@ public class InfinityCellInventory implements StorageCell {
             }
             return;
         }
-
-        long itemCount = 0;
-
-        LongArrayList amounts = new LongArrayList(storedAmounts.size());
         ListTag keys = new ListTag();
+        ListTag amount = new ListTag();
+        BigInteger count = BigInteger.ZERO;
 
-        for (Object2LongMap.Entry<AEKey> entry : this.storedAmounts.object2LongEntrySet()) {
-            long amount = entry.getLongValue();
-
-            if (amount > 0) {
-                itemCount += amount;
+        for (var entry : storedMap.object2ObjectEntrySet()) {
+            BigInteger a = entry.getValue();
+            if (a.compareTo(BigInteger.ZERO) > 0) {
+                count = count.add(a);
                 keys.add(entry.getKey().toTagGeneric());
-                amounts.add(amount);
+                amount.add(StringTag.valueOf(a.toString()));
             }
         }
 
         if (keys.isEmpty()) {
             getStorageInstance().updateDisk(getDiskUUID(), new InfinityCellDataStorage());
         } else {
-            getStorageInstance().modifyDisk(getDiskUUID(), keys, amounts.toArray(new long[0]), itemCount);
+            getStorageInstance().modifyDisk(getDiskUUID(), keys, amount, count.doubleValue());
         }
 
-        this.storedItemCount = itemCount;
-        stack.getOrCreateTag().putLong("count", itemCount);
+        this.storedItemCount = count.doubleValue();
+        stack.getOrCreateTag().putDouble("count", this.storedItemCount);
 
         this.isPersisted = true;
     }
@@ -174,19 +172,18 @@ public class InfinityCellInventory implements StorageCell {
         return true;
     }
 
-    protected Object2LongMap<AEKey> getCellItems() {
-        if (this.storedAmounts == null) {
-            this.storedAmounts = new Object2LongOpenHashMap<>();
+    protected Object2ObjectOpenHashMap<AEKey, BigInteger> getCellItems() {
+        if (this.storedMap == null) {
+            this.storedMap = new Object2ObjectOpenHashMap<>();
             this.loadCellItems();
         }
-
-        return this.storedAmounts;
+        return this.storedMap;
     }
 
     @Override
     public void getAvailableStacks(KeyCounter out) {
-        for (Object2LongMap.Entry<AEKey> entry : this.getCellItems().object2LongEntrySet()) {
-            out.add(entry.getKey(), entry.getLongValue());
+        for (var entry : this.getCellItems().object2ObjectEntrySet()) {
+            out.add(entry.getKey(), NumberUtils.getLongValue(entry.getValue()));
         }
     }
 
@@ -197,22 +194,17 @@ public class InfinityCellInventory implements StorageCell {
             return;
         }
 
-        long[] amounts = getDiskStorage().stackAmounts;
-        ListTag tags = getDiskStorage().stackKeys;
-        if (amounts.length != tags.size()) {
-            AELog.warn("Loading storage cell with mismatched amounts/tags: %d != %d",
-                    amounts.length, tags.size());
+        ListTag amounts = getDiskStorage().amounts;
+        ListTag stackKeys = getDiskStorage().stackKeys;
+        if (amounts.size() != stackKeys.size()) {
+            AELog.warn("Loading storage cell with mismatched amounts/tags: %d != %d", amounts.size(), stackKeys.size());
         }
 
-        for (int i = 0; i < amounts.length; i++) {
-            long amount = amounts[i];
-            AEKey key = AEKey.fromTagGeneric(tags.getCompound(i));
-
-            if (amount <= 0 || key == null) {
-                corruptedTag = true;
-            } else {
-                storedAmounts.put(key, amount);
-            }
+        for (int i = 0; i < amounts.size(); i++) {
+            String amount = amounts.getString(i);
+            AEKey key = AEKey.fromTagGeneric(stackKeys.getCompound(i));
+            if (amount.isEmpty() || key == null) corruptedTag = true;
+            else storedMap.put(key, new BigInteger(amount));
         }
 
         if (corruptedTag) {
@@ -226,10 +218,13 @@ public class InfinityCellInventory implements StorageCell {
 
     protected void saveChanges() {
         this.storedItemCount = 0;
-        for (long storedAmount : this.storedAmounts.values()) {
-            this.storedItemCount += storedAmount;
+        for (BigInteger storedAmount : this.storedMap.values()) {
+            if (this.storedItemCount < 0) {
+                this.storedItemCount = Double.MAX_VALUE;
+                break;
+            }
+            this.storedItemCount += storedAmount.doubleValue();
         }
-
         this.isPersisted = false;
         if (this.container != null) {
             this.container.saveChanges();
@@ -238,7 +233,7 @@ public class InfinityCellInventory implements StorageCell {
         }
     }
 
-    public long getRemainingItemCount() {
+    public double getRemainingItemCount() {
         return this.getFreeBytes() > 0 ? this.getFreeBytes() : 0;
     }
 
@@ -261,15 +256,14 @@ public class InfinityCellInventory implements StorageCell {
             loadCellItems();
         }
 
-        long currentAmount = this.getCellItems().getLong(what);
-        long remainingItemCount = getRemainingItemCount();
-
+        double remainingItemCount = getRemainingItemCount();
         if (amount > remainingItemCount) {
-            amount = remainingItemCount;
+            amount = (long) remainingItemCount;
         }
 
         if (mode == Actionable.MODULATE) {
-            getCellItems().put(what, currentAmount + amount);
+            BigInteger finalAmount = BigInteger.valueOf(amount);
+            getCellItems().compute(what, (k, v) -> v == null ? finalAmount : v.add(finalAmount));
             this.saveChanges();
         }
 
@@ -278,36 +272,37 @@ public class InfinityCellInventory implements StorageCell {
 
     @Override
     public long extract(AEKey what, long amount, Actionable mode, IActionSource source) {
-        long currentAmount = getCellItems().getLong(what);
-        if (currentAmount > 0) {
-            if (amount >= currentAmount) {
+        BigInteger currentAmount = getCellItems().get(what);
+        if (currentAmount == null) {
+            return 0L;
+        } else if (currentAmount.signum() > 0) {
+            BigInteger extractAmount = BigInteger.valueOf(amount);
+            if (currentAmount.compareTo(extractAmount) < 1) {
                 if (mode == Actionable.MODULATE) {
-                    getCellItems().remove(what, currentAmount);
+                    this.storedMap.remove(what);
                     this.saveChanges();
                 }
-
-                return currentAmount;
+                return currentAmount.longValue();
             } else {
                 if (mode == Actionable.MODULATE) {
-                    getCellItems().put(what, currentAmount - amount);
+                    this.storedMap.put(what, currentAmount.subtract(extractAmount));
                     this.saveChanges();
                 }
-
                 return amount;
             }
+        } else {
+            return 0L;
         }
-
-        return 0;
     }
 
-    public long getFreeBytes() {
-        return Long.MAX_VALUE - this.getStoredItemCount();
+    public double getFreeBytes() {
+        return Double.MAX_VALUE - this.getStoredItemCount();
     }
 
-    public long getNbtItemCount() {
+    public double getNbtItemCount() {
         if (hasDiskUUID()) {
             if (stack.getTag() != null) {
-                return stack.getTag().getLong("count");
+                return stack.getTag().getDouble("count");
             }
         }
         return 0;

@@ -1,6 +1,7 @@
 package org.gtlcore.gtlcore.common.machine.trait;
 
 import org.gtlcore.gtlcore.api.machine.multiblock.ParallelMachine;
+import org.gtlcore.gtlcore.api.machine.trait.ILockRecipe;
 import org.gtlcore.gtlcore.api.recipe.RecipeRunnerHelper;
 
 import com.gregtechceu.gtceu.api.capability.recipe.*;
@@ -24,7 +25,7 @@ import java.util.List;
 import java.util.function.BiPredicate;
 
 @Getter
-public class MultipleRecipesLogic extends RecipeLogic {
+public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
 
     private final ParallelMachine parallel;
 
@@ -80,7 +81,7 @@ public class MultipleRecipesLogic extends RecipeLogic {
             }
             input.inputs.putAll(match.inputs);
             input.setId(match.id);
-            if (RecipeRunnerHelper.matchRecipeInput(machine, input) && RecipeRunnerHelper.handleRecipeInput(machine, input)) {
+            if (RecipeRunnerHelper.handleRecipeInput(machine, input)) {
                 totalEu += match.duration * inputEUt;
                 List<Content> item = match.outputs.get(ItemRecipeCapability.CAP);
                 if (item != null) {
@@ -104,7 +105,11 @@ public class MultipleRecipesLogic extends RecipeLogic {
     }
 
     private GTRecipe lookupRecipe() {
-        return machine.getRecipeType().getLookup().findRecipe(machine);
+        if (this.isLock()) {
+            if (this.getLockRecipe() == null) this.setLockRecipe(machine.getRecipeType().getLookup().findRecipe(machine));
+            else if (!RecipeRunnerHelper.matchRecipe(machine, this.getLockRecipe())) return null;
+            return this.getLockRecipe();
+        } else return machine.getRecipeType().getLookup().findRecipe(machine);
     }
 
     private GTRecipe buildEmptyRecipe() {

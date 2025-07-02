@@ -58,7 +58,7 @@ public abstract class ResearchStationRecipeLogicMixin extends RecipeLogic {
         IObjectHolder holder = this.getMachine().getObjectHolder();
         holder.setHeldItem(ItemStack.EMPTY);
         ItemStack outputItem = ItemStack.EMPTY;
-        if (this.lastRecipe.getOutputContents(ItemRecipeCapability.CAP).size() >= 1) {
+        if (!this.lastRecipe.getOutputContents(ItemRecipeCapability.CAP).isEmpty()) {
             outputItem = ItemRecipeCapability.CAP.of(this.getLastRecipe().getOutputContents(ItemRecipeCapability.CAP).get(0).content).getItems()[0];
         }
         holder.setDataItem(outputItem);
@@ -71,6 +71,6 @@ public abstract class ResearchStationRecipeLogicMixin extends RecipeLogic {
      */
     @Overwrite(remap = false)
     protected boolean handleRecipeIO(GTRecipe recipe, IO io) {
-        return io != IO.OUT ? recipe.handleRecipeIO(io, this.machine, this.chanceCaches) : true;
+        return io == IO.OUT || recipe.handleRecipeIO(io, this.machine, this.chanceCaches);
     }
 }

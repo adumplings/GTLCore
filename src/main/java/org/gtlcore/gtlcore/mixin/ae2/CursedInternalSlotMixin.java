@@ -40,7 +40,7 @@ public abstract class CursedInternalSlotMixin {
             ItemStack newStack = new ItemStack(i.getItem().getItem());
             UUID id = UUID.randomUUID();
             newStack.getOrCreateTag().putUUID("diskuuid", id);
-            newStack.getOrCreateTag().putLong("count", storage.itemCount);
+            newStack.getOrCreateTag().putLong("count", Double.doubleToLongBits(storage.totalAmount));
             GTLCore.STORAGE_INSTANCE.updateDisk(id, storage);
             newStack.setCount(newStack.getMaxStackSize());
             setCarried(newStack);
