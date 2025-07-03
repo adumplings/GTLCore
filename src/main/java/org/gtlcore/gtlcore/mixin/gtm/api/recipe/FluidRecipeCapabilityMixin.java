@@ -16,6 +16,7 @@ import com.gregtechceu.gtceu.api.recipe.modifier.ParallelLogic;
 import com.lowdragmc.lowdraglib.side.fluid.FluidStack;
 
 import com.google.common.primitives.Ints;
+import it.unimi.dsi.fastutil.objects.Object2LongMaps;
 import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -94,6 +95,7 @@ public class FluidRecipeCapabilityMixin {
      */
     @Overwrite(remap = false)
     public int getMaxParallelRatio(IRecipeCapabilityHolder holder, GTRecipe recipe, int parallelAmount) {
+        if (parallelAmount <= 1 || recipe.inputs.get(CAP) == null) return parallelAmount;
         if (holder instanceof IDistinctMachine iDistinctMachine) {
             if (iDistinctMachine.getRecipeHandleParts().isEmpty()) return 0;
             Object2LongOpenHashMap<FluidStack> ingredientStacks = new Object2LongOpenHashMap<>();
@@ -118,24 +120,21 @@ public class FluidRecipeCapabilityMixin {
             Object2LongOpenHashMap<FluidIngredient> fluidCountMap = new Object2LongOpenHashMap<>();
             for (Content content : recipe.getInputContents(CAP)) {
                 FluidIngredient fluidInput = CAP.of(content.content);
-                long fluidAmount = fluidInput.getAmount();
                 if (content.chance > 0) {
-                    fluidCountMap.addTo(fluidInput, fluidAmount);
+                    fluidCountMap.addTo(fluidInput, fluidInput.getAmount());
                 }
-            }
-            if (fluidCountMap.isEmpty()) {
-                return parallelAmount;
             }
             long needed;
             long available;
-            for (var it = fluidCountMap.object2LongEntrySet().fastIterator(); it.hasNext(); parallelAmount = (int) Math.min(parallelAmount, available / needed)) {
+            for (var it = fluidCountMap.object2LongEntrySet().fastIterator(); it.hasNext(); parallelAmount = Ints.saturatedCast(Math.min(parallelAmount, available / needed))) {
                 var entry = it.next();
                 needed = entry.getLongValue();
                 available = 0;
-                for (var inputFluid : ingredientStacks.object2LongEntrySet()) {
-                    if (entry.getKey().test(
-                            FluidStack.create(inputFluid.getKey().getFluid(), inputFluid.getLongValue(), inputFluid.getKey().getTag()))) {
+                for (var iter = Object2LongMaps.fastIterator(ingredientStacks); iter.hasNext();) {
+                    var inputFluid = iter.next();
+                    if (entry.getKey().test(inputFluid.getKey())) {
                         available += inputFluid.getLongValue();
+                        break;
                     }
                 }
                 if (available < needed) {

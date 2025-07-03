@@ -59,6 +59,7 @@
     "gtm.api.recipe.GTRecipeMixin",
     "gtm.api.recipe.ItemRecipeCapabilityMixin",
     "gtm.api.recipe.ParallelLogicMixin",
+    "gtm.api.recipe.ingredient.SizedIngredientMixin",
     "gtm.cover.ConveyorCoverMixin",
     "gtm.cover.InfiniteWaterCoverMixin",
     "gtm.cover.PumpCoverMixin",

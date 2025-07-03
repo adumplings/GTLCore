@@ -27,19 +27,13 @@ public interface IMEPartMachine {
         return false;
     }
 
-    default void setMEOutPutBus(boolean value) {}
-
     default boolean isMEOutPutHatch() {
         return false;
     }
 
-    default void setMEOutPutHatch(boolean value) {}
-
     default boolean isMEOutPutDual() {
         return false;
     }
-
-    default void setMEOutPutDual(boolean value) {}
 
     default boolean isRecipeOutput(GTRecipe recipe) {
         return false;

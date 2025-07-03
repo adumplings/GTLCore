@@ -38,15 +38,12 @@ public abstract class WorkableMultiblockMachineMixin extends MultiblockControlle
 
     @Persisted
     @Getter
-    @Setter
     private boolean MEOutPutBus = false;
     @Persisted
     @Getter
-    @Setter
     private boolean MEOutPutHatch = false;
     @Persisted
     @Getter
-    @Setter
     private boolean MEOutPutDual = false;
     @Persisted
     @DescSynced

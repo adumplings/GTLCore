@@ -2,6 +2,7 @@ package org.gtlcore.gtlcore.mixin.gtm.api.recipe;
 
 import org.gtlcore.gtlcore.api.machine.trait.IDistinctMachine;
 import org.gtlcore.gtlcore.api.machine.trait.IMEPartMachine;
+import org.gtlcore.gtlcore.api.recipe.ingredient.ItemIngredientMap;
 
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.capability.recipe.*;
@@ -89,7 +90,7 @@ public class ItemRecipeCapabilityMixin {
      */
     @Overwrite(remap = false)
     public int getMaxParallelRatio(IRecipeCapabilityHolder holder, GTRecipe recipe, int parallelAmount) {
-        if (parallelAmount <= 1) return parallelAmount;
+        if (parallelAmount <= 1 || recipe.inputs.get(CAP) == null) return parallelAmount;
         if (holder instanceof IDistinctMachine iDistinctMachine) {
             if (iDistinctMachine.getRecipeHandleParts().isEmpty()) return 0;
             Object2LongOpenCustomHashMap<ItemStack> ingredientStacks = new Object2LongOpenCustomHashMap<>(ItemStackHashStrategy.comparingAllButCount());
@@ -126,16 +127,9 @@ public class ItemRecipeCapabilityMixin {
                     ingredientStacks.computeLong(obj.getKey(), (k, v) -> v == null ? obj.getLongValue() : v + obj.getLongValue());
                 }
             }
-            long minMultiplier = Integer.MAX_VALUE;
-            Object2IntOpenHashMap<Ingredient> countableMap = new Object2IntOpenHashMap<>();
-            Ingredient repeatIngredient = Ingredient.EMPTY;
-            ItemStack repeatStack = ItemStack.EMPTY;
-            boolean hasRepeat = false;
+            ItemIngredientMap countableMap = new ItemIngredientMap();
             for (Content content : recipe.getInputContents(CAP)) {
                 Ingredient recipeIngredient = CAP.of(content.content);
-                if (!hasRepeat) repeatStack = recipeIngredient.getItems()[0];
-                hasRepeat = recipeIngredient.test(repeatStack);
-                if (repeatIngredient.isEmpty() && hasRepeat) repeatIngredient = recipeIngredient;
                 int ingredientCount;
                 if (recipeIngredient instanceof SizedIngredient sizedIngredient) {
                     ingredientCount = sizedIngredient.getAmount();
@@ -145,31 +139,28 @@ public class ItemRecipeCapabilityMixin {
                     ingredientCount = 1;
                 }
                 if (content.chance > 0) {
-                    countableMap.addTo(hasRepeat ? repeatIngredient : recipeIngredient, ingredientCount);
+                    countableMap.addTo(recipeIngredient, ingredientCount);
                 }
             }
-            if (countableMap.isEmpty()) {
-                return parallelAmount;
-            }
-            for (var recipeInputEntry : countableMap.object2IntEntrySet()) {
-                long needed = recipeInputEntry.getIntValue();
-                long available = 0;
-                for (var inventoryEntry : ingredientStacks.object2LongEntrySet()) {
-                    if (recipeInputEntry.getKey().test(inventoryEntry.getKey())) {
-                        available += inventoryEntry.getLongValue();
+            long needed;
+            long available;
+            for (var it = Object2LongMaps.fastIterator(countableMap.getIngredientMap()); it.hasNext(); parallelAmount = Ints.saturatedCast(Math.min(parallelAmount, available / needed))) {
+                var entry = it.next();
+                needed = entry.getLongValue();
+                available = 0;
+                for (var iter = Object2LongMaps.fastIterator(ingredientStacks); iter.hasNext();) {
+                    var inputItem = iter.next();
+                    if (entry.getKey().test(inputItem.getKey())) {
+                        available += inputItem.getLongValue();
                         break;
                     }
                 }
-                if (available >= needed) {
-                    long ratio = Math.min(parallelAmount, available / needed);
-                    if (ratio < minMultiplier) {
-                        minMultiplier = ratio;
-                    }
-                } else {
-                    return 0;
+                if (available < needed) {
+                    parallelAmount = 0;
+                    break;
                 }
             }
-            return Ints.saturatedCast(minMultiplier);
+            return Ints.saturatedCast(parallelAmount);
         }
         return 1;
     }

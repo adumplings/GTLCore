@@ -29,6 +29,8 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
 
     private final ParallelMachine parallel;
 
+    private boolean change = false;
+
     private final BiPredicate<CompoundTag, IRecipeLogicMachine> dataCheck;
 
     public MultipleRecipesLogic(ParallelMachine machine) {
@@ -49,6 +51,8 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
     @Override
     public void findAndHandleRecipe() {
         lastRecipe = null;
+        lastOriginRecipe = null;
+        change = false;
         var match = getRecipe();
         if (match != null) {
             if (RecipeRunnerHelper.matchRecipeOutput(machine, match)) {
@@ -62,6 +66,7 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
         if (!machine.hasProxies()) return null;
         GTRecipe match = lookupRecipe();
         if (match == null) return null;
+        lastOriginRecipe = match;
         GTRecipe recipe = buildEmptyRecipe();
         recipe.outputs.put(ItemRecipeCapability.CAP, new ArrayList<>());
         recipe.outputs.put(FluidRecipeCapability.CAP, new ArrayList<>());
@@ -94,6 +99,7 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
             }
             match = lookupRecipe();
             if (match == null) break;
+            else if (!match.equals(lastOriginRecipe)) lastOriginRecipe = match;
         }
         if (recipe.outputs.get(ItemRecipeCapability.CAP).isEmpty() && recipe.outputs.get(FluidRecipeCapability.CAP).isEmpty())
             return null;
@@ -109,7 +115,13 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
             if (this.getLockRecipe() == null) this.setLockRecipe(machine.getRecipeType().getLookup().findRecipe(machine));
             else if (!RecipeRunnerHelper.matchRecipe(machine, this.getLockRecipe())) return null;
             return this.getLockRecipe();
-        } else return machine.getRecipeType().getLookup().findRecipe(machine);
+        } else {
+            if (change) {
+                change = false;
+                return machine.getRecipeType().getLookup().findRecipe(machine);
+            }
+            return lastOriginRecipe == null ? machine.getRecipeType().getLookup().findRecipe(machine) : lastOriginRecipe;
+        }
     }
 
     private GTRecipe buildEmptyRecipe() {
@@ -117,7 +129,7 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
     }
 
     private GTRecipe parallelRecipe(GTRecipe recipe, int max) {
-        int maxMultipliers = Integer.MAX_VALUE;
+        int maxMultipliers = max;
         for (RecipeCapability<?> cap : recipe.inputs.keySet()) {
             if (cap.doMatchInRecipe()) {
                 int currentMultiplier = cap.getMaxParallelRatio(machine, recipe, max);
@@ -126,7 +138,8 @@ public class MultipleRecipesLogic extends RecipeLogic implements ILockRecipe {
                 }
             }
         }
-        if (maxMultipliers > 0) {
+        if (maxMultipliers != max) change = true;
+        if (maxMultipliers > 1) {
             recipe = recipe.copy(ContentModifier.multiplier(maxMultipliers), false);
         }
         return recipe;
